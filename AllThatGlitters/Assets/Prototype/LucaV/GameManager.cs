@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject startRoom;
     public Room[] rooms;
     public Room[] endRooms;
+    public Room[] hallwayRooms;
     public static GameManager singleton;
     public int RoomNumber { get; set; }
     public int minRooms;

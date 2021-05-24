@@ -14,11 +14,9 @@ public class CheckPoint : MonoBehaviour
         if (colliders.Length <= 0)
         {
             isEmpty = true;
-            print("vuoto");
         }
         else
         {
-            print("C'è già qualcosa");
             isEmpty = false;
         }
         spawnTimer = Random.Range(0.20f, 0.35f);
@@ -63,7 +61,37 @@ public class CheckPoint : MonoBehaviour
                 break;
         }
 
-        Room[] usedRooms = ++GameManager.singleton.RoomNumber <= GameManager.singleton.minRooms ? GameManager.singleton.rooms : GameManager.singleton.endRooms;
+        Room[] nonEndRooms;
+        Vector3 spawnPos = transform.position;
+        if (Random.Range(0, 4) == 1)
+        {
+            Vector3 hallWayPos = transform.parent.position + (transform.position - transform.parent.position) + (transform.position - transform.parent.position).normalized * 10;
+            if (Physics.OverlapSphere(hallWayPos, 4f).Length <= 0)
+            {
+                nonEndRooms = GameManager.singleton.hallwayRooms;
+                spawnPos = hallWayPos;
+                print("Corridoio");
+            }
+            else
+            {
+                nonEndRooms = GameManager.singleton.rooms;
+            }
+        }
+        else
+        {
+            nonEndRooms = GameManager.singleton.rooms;
+        }
+
+        Room[] usedRooms;
+        if (++GameManager.singleton.RoomNumber <= GameManager.singleton.minRooms)
+        {
+            usedRooms = nonEndRooms;
+        }
+        else
+        {
+            usedRooms = GameManager.singleton.endRooms;
+            spawnPos = transform.position;
+        }
         foreach (var room in usedRooms)
         {
             foreach (var dir in room.directions)
@@ -77,10 +105,6 @@ public class CheckPoint : MonoBehaviour
 
         int rand = Random.Range(0, possibleRooms.Count);
 
-        Instantiate(possibleRooms[rand].gameObject, transform.position, Quaternion.identity);
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, 2f);
+        Instantiate(possibleRooms[rand].gameObject, spawnPos, Quaternion.identity);
     }
 }

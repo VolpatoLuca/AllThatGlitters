@@ -5,3 +5,10 @@ public enum Direction
     south,
     east
 }
+
+public enum GameState
+{
+    loading,
+    playing,
+    gameOver
+}

@@ -145,3 +145,4 @@ System memory in use after: 117.4 MB.
 Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3029.
 Total: 2.977200 ms (FindLiveObjects: 0.198200 ms CreateObjectMapping: 0.091600 ms MarkObjects: 1.499300 ms  DeleteObjects: 1.187600 ms)
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

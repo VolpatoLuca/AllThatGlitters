@@ -251,6 +251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1451718682}
+  maxCameraOffset: {x: 0, y: 22, z: -11.5}
+  smoothSpeed: 0.01
+  zoomSpeed: 5
 --- !u!114 &252762791
 MonoBehaviour:
   m_ObjectHideFlags: 0

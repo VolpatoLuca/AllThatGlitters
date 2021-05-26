@@ -14,11 +14,12 @@ public class GameManager : MonoBehaviour
     public Room[] rooms;
     public Room[] endRooms;
     public Room[] hallwayRooms;
-    public GameState gameState;
-    public Dictionary<Room, float> roomDistances = new Dictionary<Room, float>();
-    public GameObject endLevelInteractable;
+    [HideInInspector] public GameState gameState;
+    [HideInInspector] public Dictionary<Room, float> roomDistances = new Dictionary<Room, float>();
+    [HideInInspector] public GameObject endLevelInteractable;
+    [HideInInspector] public List<PropGenerator> enemyGenerators = new List<PropGenerator>();
+    [HideInInspector] public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
     public Vector3 startPos { get; set; }
-
     public int RoomNumber { get; set; }
     public int minRooms;
     public int EnemyRobotsNumber { get; set; }
@@ -53,6 +54,10 @@ public class GameManager : MonoBehaviour
         {
             StartLevelGeneration();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetLevel();
+        }
 
         if (RoomNumber > minRooms)
         {
@@ -85,8 +90,24 @@ public class GameManager : MonoBehaviour
             }
         }
         endRoom.IsEndRoom = true;
+        if (enemyGenerators.Count > 0)
+            SelectSpawners(enemyGenerators, maxEnemyRobots);
+        if (friendsGenerators.Count > 0)
+            SelectSpawners(friendsGenerators, maxFriendlyRobots);
+
         RoomsGenerated?.Invoke();
     }
+
+    private void SelectSpawners(List<PropGenerator> list, int spawnAmount)
+    {
+        for (int i = 0; i < spawnAmount; i++)
+        {
+            int rand = Random.Range(0, list.Count);
+            list[rand].canSpawn = true;
+            list.RemoveAt(rand);
+        }
+    }
+
     public void SetDifficulty(LevelDifficulty diff)
     {
         maxEnemyRobots = diff.enemyRobotsAmount;
@@ -110,5 +131,9 @@ public class GameManager : MonoBehaviour
         EnemyRobotsNumber = 0;
         RoomNumber = 0;
         FriendlyRobotsNumber = 0;
+        enemyGenerators.Clear();
+        friendsGenerators.Clear();
+        roomDistances.Clear();
+        generateWaitTime = 1;
     }
 }

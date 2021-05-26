@@ -11,11 +11,13 @@ public class Room : MonoBehaviour
     private void OnEnable()
     {
         GameManager.singleton.RoomsGenerated += CheckIsEndRoom;
+        GameManager.singleton.LevelReset += DestroyRoom;
     }
 
     private void OnDisable()
     {
         GameManager.singleton.RoomsGenerated -= CheckIsEndRoom;
+        GameManager.singleton.LevelReset -= DestroyRoom;
     }
 
     private void Start()
@@ -33,5 +35,10 @@ public class Room : MonoBehaviour
                 renderers[i].material.color = Color.red;
             }
         }
+    }
+
+    private void DestroyRoom()
+    {
+        Destroy(gameObject);
     }
 }

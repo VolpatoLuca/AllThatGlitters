@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyRobot : Robot
 {
-    private bool isActivated = false;
-    [SerializeField] private float distanceThreshold = 1f;
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private int maxEnergy;
     private float currentEnergy;
@@ -16,6 +14,7 @@ public class EnemyRobot : Robot
     {
         base.Start();
         currentEnergy = maxEnergy;
+        agent.speed = moveSpeed;
     }
 
     protected override void Update()
@@ -35,8 +34,8 @@ public class EnemyRobot : Robot
                 isActive = false;
                 agent.isStopped = true;
             }
-            
-            if(Vector3.Distance(transform.position, player.position) < 2f)
+
+            if (Vector3.Distance(transform.position, player.position) < 2f)
             {
                 //remove player's energy
             }

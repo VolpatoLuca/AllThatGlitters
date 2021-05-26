@@ -12,7 +12,7 @@ public class FriendlyRobot : Robot
         if (player != null && isActivated && !isFollowing)
         {
             isFollowing = true;
-            StartCoroutine(FollowPlayer(player, .5f));
+            StartCoroutine(FollowPlayer(player, distanceThreshold));
         }
     }
 

@@ -5,14 +5,14 @@ using UnityEngine;
 public class FriendlyRobot : Robot
 {
     private bool isActivated = false;
-    private Transform player;
     [SerializeField] private float distanceThreshold = 1f;
 
     protected override void Update()
     {
-        if (isActivated && Vector3.Distance(transform.position, player.position) > distanceThreshold)
+        if (player != null && isActivated && !isFollowing)
         {
-            transform.position = Vector3.Lerp(transform.position, player.position, 1f * Time.deltaTime);
+            isFollowing = true;
+            StartCoroutine(FollowPlayer(player, .5f));
         }
     }
 
@@ -25,6 +25,7 @@ public class FriendlyRobot : Robot
     protected override void OnPlayerNearby(GameObject _player)
     {
         base.OnPlayerNearby(_player);
-        player = _player.transform;
     }
+
+
 }

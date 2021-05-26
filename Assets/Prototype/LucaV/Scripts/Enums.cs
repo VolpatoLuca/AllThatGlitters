@@ -8,6 +8,7 @@ public enum Direction
 
 public enum GameState
 {
+    waitingInput,
     loading,
     playing,
     gameOver

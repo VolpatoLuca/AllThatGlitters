@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject startRoom;
 
-    public delegate void RoomsGeneration();
-    public event RoomsGeneration RoomsGenerated;
+    public delegate void ManagerEvent();
+    public event ManagerEvent RoomsGenerated;
+    public event ManagerEvent LevelReset;
     public Room[] rooms;
     public Room[] endRooms;
     public Room[] hallwayRooms;
@@ -37,16 +38,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        gameState = GameState.loading;
-        Instantiate(startRoom, transform.position, Quaternion.identity);
+        gameState = GameState.waitingInput;
     }
+
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartLevelGeneration();
+        }
+
         if (RoomNumber > minRooms)
         {
             generateWaitTime -= Time.deltaTime;
@@ -58,7 +65,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SetupLevel()
+    private void StartLevelGeneration()
+    {
+        gameState = GameState.loading;
+        Instantiate(startRoom, transform.position, Quaternion.identity);
+    }
+
+    public void SetupLevel()
     {
         gameState = GameState.playing;
         float maxDistance = 0;
@@ -74,6 +87,12 @@ public class GameManager : MonoBehaviour
         endRoom.IsEndRoom = true;
         RoomsGenerated?.Invoke();
     }
+    public void SetDifficulty(LevelDifficulty diff)
+    {
+        maxEnemyRobots = diff.enemyRobotsAmount;
+        maxFriendlyRobots = diff.friendlyRobotsAmount;
+        minRooms = diff.roomAmount;
+    }
 
     public void OnLevelFinish(bool hasPlayerWon)
     {
@@ -83,5 +102,13 @@ public class GameManager : MonoBehaviour
     public void SendRoomDistance(Room r, float d)
     {
         roomDistances.Add(r, d);
+    }
+
+    public void ResetLevel()
+    {
+        LevelReset?.Invoke();
+        EnemyRobotsNumber = 0;
+        RoomNumber = 0;
+        FriendlyRobotsNumber = 0;
     }
 }

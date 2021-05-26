@@ -65,7 +65,7 @@ public class CheckPoint : MonoBehaviour
         Vector3 spawnPos = transform.position;
         if (Random.Range(0, 4) == 1)
         {
-            Vector3 hallWayPos = transform.parent.position + (transform.position - transform.parent.position) + (transform.position - transform.parent.position).normalized * 10;
+            Vector3 hallWayPos = transform.parent.position + (transform.position - transform.parent.position) + (transform.position - transform.parent.position).normalized * 10; //DA CAMBIARE IN 5
             if (Physics.OverlapSphere(hallWayPos, 4f).Length <= 0)
             {
                 nonEndRooms = GameManager.singleton.hallwayRooms;
@@ -103,7 +103,6 @@ public class CheckPoint : MonoBehaviour
         }
 
         int rand = Random.Range(0, possibleRooms.Count);
-
         Instantiate(possibleRooms[rand].gameObject, spawnPos, Quaternion.identity);
     }
 }

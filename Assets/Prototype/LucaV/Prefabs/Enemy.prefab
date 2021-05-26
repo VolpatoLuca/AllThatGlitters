@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceThreshold: 1
   moveSpeed: 2
+  maxEnergy: 3
 --- !u!136 &4974864344949147885
 CapsuleCollider:
   m_ObjectHideFlags: 0

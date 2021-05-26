@@ -7,6 +7,8 @@ using UnityEngine;
 public abstract class Robot : MonoBehaviour
 {
 
+    protected bool isFollowing = false;
+    protected Transform player;
     protected NavMeshAgent agent;
 
     protected virtual void Start()
@@ -23,7 +25,7 @@ public abstract class Robot : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         //if(other.TryGetComponent(out PlayerController))
         //{
@@ -32,8 +34,20 @@ public abstract class Robot : MonoBehaviour
         //}
     }
 
-    protected virtual void OnPlayerNearby(GameObject player)
+    protected virtual void OnPlayerNearby(GameObject _player)
     {
+        player = _player.transform;
+    }
 
+    protected IEnumerator FollowPlayer(Transform target, float offset)
+    {
+        while (true)
+        {
+            if (Vector3.Distance(target.position - (transform.position - target.position).normalized * offset, agent.destination) > 1f)
+            {
+                agent.SetDestination(target.position);
+            }
+            yield return null;
+        }
     }
 }

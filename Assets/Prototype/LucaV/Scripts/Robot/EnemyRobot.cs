@@ -6,15 +6,40 @@ using UnityEngine.AI;
 public class EnemyRobot : Robot
 {
     private bool isActivated = false;
-    private Transform player;
     [SerializeField] private float distanceThreshold = 1f;
     [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private int maxEnergy;
+    private float currentEnergy;
+    private bool isActive;
+
+    protected override void Start()
+    {
+        base.Start();
+        currentEnergy = maxEnergy;
+    }
 
     protected override void Update()
     {
-        if (player != null)
+        if (player != null && !isFollowing)
         {
-            StartCoroutine(FollowPlayer(player));
+            isFollowing = true;
+            isActive = true;
+            StartCoroutine(FollowPlayer(player, 0));
+        }
+        if (isFollowing && isActive)
+        {
+            currentEnergy -= Time.deltaTime;
+            if (currentEnergy <= 0)
+            {
+                StopAllCoroutines();
+                isActive = false;
+                agent.isStopped = true;
+            }
+            
+            if(Vector3.Distance(transform.position, player.position) < 2f)
+            {
+                //remove player's energy
+            }
         }
     }
 
@@ -26,18 +51,6 @@ public class EnemyRobot : Robot
     protected override void OnPlayerNearby(GameObject _player)
     {
         base.OnPlayerNearby(_player);
-        player = _player.transform;
     }
 
-    private IEnumerator FollowPlayer(Transform target)
-    {
-        while (true)
-        {
-            if (Vector3.Distance(target.position, agent.destination) > 1f)
-            {
-                agent.SetDestination(target.position);
-            }
-            yield return null;
-        }
-    }
 }

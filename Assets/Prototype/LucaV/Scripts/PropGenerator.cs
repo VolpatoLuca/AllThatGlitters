@@ -18,7 +18,7 @@ public class PropGenerator : MonoBehaviour
             spawn = props[rand];
         }
         else
-            Instantiate(props[rand], transform.position, Quaternion.identity).transform.parent = transform;
+            Instantiate(props[rand], transform.position, transform.rotation).transform.parent = transform;
     }
 
     private void Update()
@@ -47,5 +47,15 @@ public class PropGenerator : MonoBehaviour
     {
         canSpawn = true;
     }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(transform.position + Vector3.up, new Vector3(1, 2, 1));
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position + Vector3.up, new Vector3(2, 2, 2));
+    }
+#endif
 
 }

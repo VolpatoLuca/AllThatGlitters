@@ -15,11 +15,11 @@ C:/Users/chiar/Documents/GitHub/AllThatGlitters/AllThatGlitters
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51937
+64047
 Successfully changed project path to: C:/Users/chiar/Documents/GitHub/AllThatGlitters/AllThatGlitters
 C:/Users/chiar/Documents/GitHub/AllThatGlitters/AllThatGlitters
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 46.03 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 35.52 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,31 +35,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001573 seconds.
+Registered in 0.001571 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 38.08 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 37.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.846 seconds
+- Completed reload, in  0.831 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000938 seconds.
+Registered in 0.000942 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 37.72 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 36.93 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.800 seconds
+- Completed reload, in  0.743 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -68,186 +68,314 @@ Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Ren
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
 Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2419 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 112.7 MB.
-System memory in use after: 109.9 MB.
+Unloading 2421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.1 MB.
+System memory in use after: 112.3 MB.
 
-Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2824.
-Total: 3.358500 ms (FindLiveObjects: 0.266700 ms CreateObjectMapping: 0.065300 ms MarkObjects: 1.758800 ms  DeleteObjects: 1.266800 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Readme.asset
-  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334f5a03b14dc4361312f7820410db03') in 0.027255 seconds
-  Import took 0.030798 seconds .
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2830.
+Total: 3.442900 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.066600 ms MarkObjects: 1.784600 ms  DeleteObjects: 1.244000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 49.800578 seconds.
-  path: Assets/Presets/AudioCompressedInMemory.preset
-  artifactKey: Guid(2dd802e4d37c65149922028d3e973832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Presets/AudioCompressedInMemory.preset using Guid(2dd802e4d37c65149922028d3e973832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '361cddc44d5c2ce2d2e0b509073cad40') in 0.008321 seconds
-  Import took 0.012262 seconds .
+  path: Assets/Models/capsula_pianta_01 1.fbx
+  artifactKey: Guid(c43dee7d2d803154d8fb20c57dfba77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/capsula_pianta_01 1.fbx using Guid(c43dee7d2d803154d8fb20c57dfba77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95de0a89d45f6659aa4486a43dbc31e') in 0.252705 seconds
+  Import took 0.256926 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Presets/AudioStreaming.preset
-  artifactKey: Guid(86bcce7f5575b54408aa0f3a7d321039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Presets/AudioStreaming.preset using Guid(86bcce7f5575b54408aa0f3a7d321039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c12d554366b3b90522cc13b5feff56') in 0.006041 seconds
-  Import took 0.009077 seconds .
+  Time since last request: 2034.802705 seconds.
+  path: Assets/Textures/capsula_pianta_01_1001_AlbedoTransparency.png
+  artifactKey: Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1001_AlbedoTransparency.png using Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43379a168bcae5407fcaa34d728e4dc8') in 0.063259 seconds
+  Import took 0.067685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Textures/capsula_pianta_01_1001_MetallicSmoothness.png
+  artifactKey: Guid(a5d87827b1c7c8e4ebbf79b9bf53400f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1001_MetallicSmoothness.png using Guid(a5d87827b1c7c8e4ebbf79b9bf53400f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e254b0a88153a2079d9e946b555c90') in 0.013072 seconds
+  Import took 0.017012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Textures/capsula_pianta_01_1001_Normal.png
+  artifactKey: Guid(80fa3b71d66a1b04cba3d57b2513db2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1001_Normal.png using Guid(80fa3b71d66a1b04cba3d57b2513db2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '686fa72b37a8e375770c93b9540e468a') in 0.010196 seconds
+  Import took 0.013373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Textures/capsula_pianta_01_1002_AlbedoTransparency.png
+  artifactKey: Guid(992d2edca0933f7409e2cd878d24e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1002_AlbedoTransparency.png using Guid(992d2edca0933f7409e2cd878d24e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c52461db885047df49b8b253e525d66') in 0.010568 seconds
+  Import took 0.014588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Textures/capsula_pianta_01_1002_MetallicSmoothness.png
+  artifactKey: Guid(b2af2ff48cb38244488f0dd1298aa62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1002_MetallicSmoothness.png using Guid(b2af2ff48cb38244488f0dd1298aa62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b90428aafccd52251e1bbc483025cf9') in 0.012358 seconds
+  Import took 0.016065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Textures/capsula_pianta_01_1001_AlbedoTransparency.png
+  artifactKey: Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1001_AlbedoTransparency.png using Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43379a168bcae5407fcaa34d728e4dc8') in 0.011917 seconds
+  Import took 0.015597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Textures/capsula_pianta_01_1002_Normal.png
+  artifactKey: Guid(8cd316e349dd28f4aaa9b914db8d91e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/capsula_pianta_01_1002_Normal.png using Guid(8cd316e349dd28f4aaa9b914db8d91e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcaea0d00a212190e51a1778fc1acacc') in 0.011745 seconds
+  Import took 0.015354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6437.388105 seconds.
+  path: Assets/Models/New Material.mat
+  artifactKey: Guid(02a26d6160ca59c4daccf14b0d13159c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/New Material.mat using Guid(02a26d6160ca59c4daccf14b0d13159c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff55e6aac53863d1f72c8a228798c907') in 0.031621 seconds
+  Import took 0.035826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1775.325574 seconds.
+  path: Assets/Prototype
+  artifactKey: Guid(c3005076b4e93ac4e855dbd23a7dec17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype using Guid(c3005076b4e93ac4e855dbd23a7dec17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b94c75d31c553a2cc986a9b0057d494') in 0.008044 seconds
+  Import took 0.012239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.150107 seconds.
+  path: Assets/Prototype/Chiachi
+  artifactKey: Guid(899c0d6ac6f5d284bb969e425d638f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi using Guid(899c0d6ac6f5d284bb969e425d638f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83e1081a8a97b5ad50de181ccf5ca4e') in 0.006715 seconds
+  Import took 0.010642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.247606 seconds.
+  path: Assets/Prototype/Chiachi/aiStandardSurface2.mat
+  artifactKey: Guid(4e08d87231b81224db5d14a4bdc79b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/aiStandardSurface2.mat using Guid(4e08d87231b81224db5d14a4bdc79b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be45315aebe7819e95b5cf49fc14d95') in 0.025624 seconds
+  Import took 0.030124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01 1.fbx
+  artifactKey: Guid(c43dee7d2d803154d8fb20c57dfba77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01 1.fbx using Guid(c43dee7d2d803154d8fb20c57dfba77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee67f457e02c618e1f996c33849090c') in 0.077594 seconds
+  Import took 0.080931 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000205 seconds.
-  path: Assets/Presets/NormalTexture.preset
-  artifactKey: Guid(14a57cf3b9fa1c74b884aa7e0dcf1faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Presets/NormalTexture.preset using Guid(14a57cf3b9fa1c74b884aa7e0dcf1faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91d8e2807f2b0647d1da5b080fb483d8') in 0.007637 seconds
-  Import took 0.011649 seconds .
+  path: Assets/Prototype/Chiachi/pasted__blinn1.mat
+  artifactKey: Guid(3cc8cc80008fc024aa9c57c994d95de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/pasted__blinn1.mat using Guid(3cc8cc80008fc024aa9c57c994d95de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c0821a860c5f54debc09697bb94ec49') in 0.011236 seconds
+  Import took 0.015552 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Presets/UtilityTexture.preset
-  artifactKey: Guid(45f7b2e3c78185248b3adbb14429c2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Presets/UtilityTexture.preset using Guid(45f7b2e3c78185248b3adbb14429c2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd4efd4825bc4b9611cef5cf4244ac0') in 0.007306 seconds
-  Import took 0.010820 seconds .
+  Time since last request: 0.000162 seconds.
+  path: Assets/Prototype/Chiachi/lambert1.mat
+  artifactKey: Guid(eccd6536acbe4414ea7b42cb2ee0ab06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/lambert1.mat using Guid(eccd6536acbe4414ea7b42cb2ee0ab06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2feed7132fd9df4d4dc8f3cb55de6f4a') in 0.017034 seconds
+  Import took 0.020495 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.360883 seconds.
-  path: Assets/Settings/ForwardRenderer.asset
-  artifactKey: Guid(4a8e21d5c33334b11b34a596161b9360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/ForwardRenderer.asset using Guid(4a8e21d5c33334b11b34a596161b9360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '094adbd3833ff0581c1ca210ea7a2647') in 0.007149 seconds
-  Import took 0.010880 seconds .
+  Time since last request: 0.000196 seconds.
+  path: Assets/Prototype/Chiachi/transp.mat
+  artifactKey: Guid(ced094a82d76cfb45b82490ff009d9cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/transp.mat using Guid(ced094a82d76cfb45b82490ff009d9cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09b268945e90e05a6f96af0fa3bf9f9') in 0.012445 seconds
+  Import took 0.016626 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Settings/SampleSceneProfile.asset
-  artifactKey: Guid(10fc4df2da32a41aaa32d77bc913491c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/SampleSceneProfile.asset using Guid(10fc4df2da32a41aaa32d77bc913491c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '831e0bb2bc11b81eb093899ece878b1f') in 0.015539 seconds
-  Import took 0.018860 seconds .
+  Time since last request: 372.284065 seconds.
+  path: Assets/TutorialInfo/Icons/Help_Icon.png
+  artifactKey: Guid(34f556d724b1bbf4097ca6220db2c581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/Help_Icon.png using Guid(34f556d724b1bbf4097ca6220db2c581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f439ec9f87fa6200a93c686067d29213') in 0.018781 seconds
+  Import took 0.023006 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Settings/UniversalRP-LowQuality.asset
-  artifactKey: Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/UniversalRP-LowQuality.asset using Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '818ec21de0b0851aefaaa406d899c4d4') in 0.007529 seconds
-  Import took 0.010889 seconds .
+  Time since last request: 0.000211 seconds.
+  path: Assets/TutorialInfo/Icons/UniversalIcon.png
+  artifactKey: Guid(7801804018a7dcf42abb827444e18660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/UniversalIcon.png using Guid(7801804018a7dcf42abb827444e18660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d12416a6b21aee1d4b3cfb83c4bd8f') in 0.010800 seconds
+  Import took 0.014680 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Settings/UniversalRP-MediumQuality.asset
-  artifactKey: Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/UniversalRP-MediumQuality.asset using Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75c485665604191945fdda4acc4a2d74') in 0.007150 seconds
-  Import took 0.010694 seconds .
+  Time since last request: 0.000207 seconds.
+  path: Assets/TutorialInfo/Icons/Help_Icon.png
+  artifactKey: Guid(34f556d724b1bbf4097ca6220db2c581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/Help_Icon.png using Guid(34f556d724b1bbf4097ca6220db2c581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f439ec9f87fa6200a93c686067d29213') in 0.006137 seconds
+  Import took 0.010107 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Settings/UniversalRP-HighQuality.asset
-  artifactKey: Guid(19ba41d7c0026c3459d37c2fe90c55a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/UniversalRP-HighQuality.asset using Guid(19ba41d7c0026c3459d37c2fe90c55a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f15726bf0a1be59f30c93fd1e81921e7') in 0.007194 seconds
-  Import took 0.010466 seconds .
+  Time since last request: 0.002127 seconds.
+  path: Assets/TutorialInfo/Icons/UniversalIcon.png
+  artifactKey: Guid(7801804018a7dcf42abb827444e18660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/UniversalIcon.png using Guid(7801804018a7dcf42abb827444e18660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d12416a6b21aee1d4b3cfb83c4bd8f') in 0.010467 seconds
+  Import took 0.013987 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.649084 seconds.
-  path: Assets/Materials/Skybox_Mat.mat
-  artifactKey: Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Skybox_Mat.mat using Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238b0f948f1a3a3cfff6979afabd3cc0') in 0.160752 seconds
-  Import took 0.164694 seconds .
+  Time since last request: 333.245555 seconds.
+  path: Assets/Prototype/Chiachi/Lamp.fbx
+  artifactKey: Guid(045e1e757fa60e240a855a9a7e7427cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/Lamp.fbx using Guid(045e1e757fa60e240a855a9a7e7427cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda95477aa8768ece087ec2e9df252a2') in 0.051293 seconds
+  Import took 0.055559 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.814153 seconds.
-  path: Assets/Prototype/LucaV
-  artifactKey: Guid(c6bbe44293636354e83362273fe4d5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prototype/LucaV using Guid(c6bbe44293636354e83362273fe4d5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1986c14cedb0d1083737ee0ab6886b7a') in 0.005753 seconds
-  Import took 0.009550 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 238.167739 seconds.
-  path: Assets/Models/capsula_pianta_01.fbx
-  artifactKey: Guid(98865a1458657c44fb9d9970c3c91679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/capsula_pianta_01.fbx using Guid(98865a1458657c44fb9d9970c3c91679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c8986e026f3e3cd62f2c2151ced662') in 1.034220 seconds
-  Import took 1.038921 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/Models/Cassa_01_Lp.fbx
-  artifactKey: Guid(25baee827160e204f8d37bac36c0d032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cassa_01_Lp.fbx using Guid(25baee827160e204f8d37bac36c0d032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0250940ed1bfda776ce4ea0c4fe88e') in 0.016332 seconds
-  Import took 0.019680 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Models/scrivania_01_LP.fbx
-  artifactKey: Guid(faddccf70452f2a4caac54ddc5c951a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/scrivania_01_LP.fbx using Guid(faddccf70452f2a4caac54ddc5c951a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebdc1506e6013234e6a0f9be502f19f7') in 0.017671 seconds
-  Import took 0.021124 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1559.735826 seconds.
-  path: Assets/Models/capsula_pianta_01.fbx
-  artifactKey: Guid(98865a1458657c44fb9d9970c3c91679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/capsula_pianta_01.fbx using Guid(98865a1458657c44fb9d9970c3c91679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1d648f84c1868595788f3842d3e50fc') in 0.082028 seconds
-  Import took 0.087264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1413.142155 seconds.
-  path: Assets/Models/Cassa_01.fbx
-  artifactKey: Guid(d5cc30f715f139b41b007abe3a9fabf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cassa_01.fbx using Guid(d5cc30f715f139b41b007abe3a9fabf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a435adab510870bb535dddf8e75308ac') in 0.040431 seconds
+  Time since last request: 24.690481 seconds.
+  path: Assets/Prototype/Chiachi/batteria_01.fbx
+  artifactKey: Guid(d1f12407bc7b7b34fbd729c3e2c70f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/batteria_01.fbx using Guid(d1f12407bc7b7b34fbd729c3e2c70f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608b8bb0d8b34518c5475a85a823d32d') in 0.040708 seconds
   Import took 0.044859 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 505.535316 seconds.
-  path: Assets/Models/Totem.fbx
-  artifactKey: Guid(5a0c441f547fc024e8d2140ab1baa795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Totem.fbx using Guid(5a0c441f547fc024e8d2140ab1baa795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d1e8b0277bd7889dd03d6b9af3c368') in 0.234148 seconds
-  Import took 0.239312 seconds .
+  Time since last request: 137.168698 seconds.
+  path: Assets/Prototype/Chiachi/Cassa_Grande_01.fbx
+  artifactKey: Guid(9c2d2c2af16883a4289b40b356c2c567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/Cassa_Grande_01.fbx using Guid(9c2d2c2af16883a4289b40b356c2c567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9156fdcbf38c2860c882bcfd4ec7ba7') in 0.031919 seconds
+  Import took 0.035850 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 216.430575 seconds.
-  path: Assets/Models/Turbina_fluttuante.fbx
-  artifactKey: Guid(fe8a8be5692beb54c8b9b2065a3fdf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Turbina_fluttuante.fbx using Guid(fe8a8be5692beb54c8b9b2065a3fdf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c3f439aea4b6cd49674761652bc8be') in 0.032909 seconds
-  Import took 0.037342 seconds .
+  Time since last request: 29.548409 seconds.
+  path: Assets/Prototype/Chiachi/cassa_base.fbx
+  artifactKey: Guid(8e9b13fc66abd694d8e53ffc52cda76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/cassa_base.fbx using Guid(8e9b13fc66abd694d8e53ffc52cda76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ba9b6cba1a877abc6a34059e7fbf3f5') in 0.022604 seconds
+  Import took 0.026955 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1393.988773 seconds.
-  path: Assets/Models/Bombola.fbx
+  Time since last request: 12.653200 seconds.
+  path: Assets/Prototype/Chiachi/Bombola.fbx
   artifactKey: Guid(4cd794c4121216d4886dc0cc495e583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Bombola.fbx using Guid(4cd794c4121216d4886dc0cc495e583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25640874a6a1af2cd195b44baadd2474') in 0.052230 seconds
-  Import took 0.056579 seconds .
+Start importing Assets/Prototype/Chiachi/Bombola.fbx using Guid(4cd794c4121216d4886dc0cc495e583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9512058d44eb3b1e71fa36336c6ce61') in 0.056635 seconds
+  Import took 0.060709 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 352.575411 seconds.
-  path: Assets/Models/capsula_pianta_fluttuante.fbx
-  artifactKey: Guid(7c04b88745526ed42a714c36be1a6cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/capsula_pianta_fluttuante.fbx using Guid(7c04b88745526ed42a714c36be1a6cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7b856db05b43c4fa205b9015409848') in 0.064275 seconds
-  Import took 0.068709 seconds .
+  Time since last request: 129.907443 seconds.
+  path: Assets/Prototype/Chiachi/Bombola.fbx
+  artifactKey: Guid(4cd794c4121216d4886dc0cc495e583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/Bombola.fbx using Guid(4cd794c4121216d4886dc0cc495e583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2024816e49fda3d92af816cc1971c98e') in 0.065275 seconds
+  Import took 0.069176 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2606.687402 seconds.
-  path: Assets/Models
-  artifactKey: Guid(ba77bb7a529b9bb4a8919354fff403f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(ba77bb7a529b9bb4a8919354fff403f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7d56aab1adef0249afba667ba53ee1') in 0.006514 seconds
-  Import took 0.010535 seconds .
+  Time since last request: 45.101869 seconds.
+  path: Assets/Prototype/Chiachi/batteria_energia_LP.fbx
+  artifactKey: Guid(31abc83330d0e564b96981b2694cd124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/batteria_energia_LP.fbx using Guid(31abc83330d0e564b96981b2694cd124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8d25fe2beb8493167183c452e649b1d') in 0.049813 seconds
+  Import took 0.053812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.725356 seconds.
+  path: Assets/Prototype/Chiachi/Barile_02.fbx
+  artifactKey: Guid(81f85decd8062de47bb7f095dfbb46a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/Barile_02.fbx using Guid(81f85decd8062de47bb7f095dfbb46a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bc921f85a6e22f9ea7c5b9aeeff7c88') in 0.035081 seconds
+  Import took 0.039144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2020.020586 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01.fbx
+  artifactKey: Guid(17618dd8d8cbace4cac7ac413ee6920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01.fbx using Guid(17618dd8d8cbace4cac7ac413ee6920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5f280048dd1a5a9cb3e8918ad7e9a38') in 0.054905 seconds
+  Import took 0.059392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 342.973343 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_1001_AlbedoTransparency.png
+  artifactKey: Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_1001_AlbedoTransparency.png using Guid(53cc85a58be209c4594736d2ca011824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac611fcae72bee3d0b1e988367844818') in 0.025003 seconds
+  Import took 0.029562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_1001_MetallicSmoothness.png
+  artifactKey: Guid(a5d87827b1c7c8e4ebbf79b9bf53400f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_1001_MetallicSmoothness.png using Guid(a5d87827b1c7c8e4ebbf79b9bf53400f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b12d36a6c0450d8ce9e27db3cff803d') in 0.012801 seconds
+  Import took 0.015959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_1001_Normal.png
+  artifactKey: Guid(80fa3b71d66a1b04cba3d57b2513db2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_1001_Normal.png using Guid(80fa3b71d66a1b04cba3d57b2513db2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '463d269d012b85a2f1504d76d3c7597d') in 0.011850 seconds
+  Import took 0.015679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_1002_AlbedoTransparency.png
+  artifactKey: Guid(992d2edca0933f7409e2cd878d24e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_1002_AlbedoTransparency.png using Guid(992d2edca0933f7409e2cd878d24e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78541d24c04e77ba1830ec78bdfc480c') in 0.010458 seconds
+  Import took 0.013733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.691270 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01.fbx
+  artifactKey: Guid(17618dd8d8cbace4cac7ac413ee6920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01.fbx using Guid(17618dd8d8cbace4cac7ac413ee6920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33201fe54763340ef9cc9f33ac188db7') in 0.065713 seconds
+  Import took 0.069850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_vetro_MAT.mat
+  artifactKey: Guid(be41d0186e2a4f2498b1055415639a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_vetro_MAT.mat using Guid(be41d0186e2a4f2498b1055415639a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a1466327533508191d0db97280c8a7') in 0.013272 seconds
+  Import took 0.016959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_vaso_MAT.mat
+  artifactKey: Guid(fa83b2452931be848b8856b504bf9734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_vaso_MAT.mat using Guid(fa83b2452931be848b8856b504bf9734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '403a526b8d4298316f022ce76c5a1a77') in 0.018144 seconds
+  Import took 0.021725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_plant_mat.mat
+  artifactKey: Guid(b1594c1557573874d8af0143aae22893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_plant_mat.mat using Guid(b1594c1557573874d8af0143aae22893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8feccbf79de3ede3d85f33d93a0d969a') in 0.015190 seconds
+  Import took 0.019130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Prototype/Chiachi/capsula_pianta_01_scocca_MAT.mat
+  artifactKey: Guid(7207b604a0ec197458976ffcf385be21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype/Chiachi/capsula_pianta_01_scocca_MAT.mat using Guid(7207b604a0ec197458976ffcf385be21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f9179adca0c907fc0b441af97a1524') in 0.012931 seconds
+  Import took 0.016319 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

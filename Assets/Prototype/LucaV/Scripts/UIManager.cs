@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PauseGame(true);
+            PauseUnpauseGame();
         }
     }
 
@@ -77,10 +77,11 @@ public class UIManager : MonoBehaviour
     /// Toggle pause menu
     /// </summary>
     /// <param name="isInPause">If is going in pause or out</param>
-    public void PauseGame(bool isInPause)
+    public void PauseUnpauseGame()
     {
-        inGameMenuCanvas.SetActive(isInPause);
-        if (isInPause)
+        bool isInPause = GameManager.singleton.gameState == GameState.pause;
+        inGameMenuCanvas.SetActive(!isInPause);
+        if (!isInPause)
         {
             GameManager.singleton.gameState = GameState.pause;
 

@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     PlayerInputs inputs;
 
     //settings 
-    [SerializeField]  [Range(1f,10f)]
+    [SerializeField]
+    [Range(1f, 10f)]
     float speed = 5f;
     [SerializeField]
     float turnSmoothingTime = 0.1f;
@@ -32,22 +33,24 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         isGrounded = controller.isGrounded;
-        ManageMovement();
-        
+        if (GameManager.singleton.gameState == GameState.playing)
+        {
+            ManageMovement();
+        }
     }
 
     private void ManageMovement()
     {
 
         Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? 0.0f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
-        
+
         //ISGROUNDED è RETARD   
 
         if (direction.magnitude >= 0.1f)
         {
             RotateTowardsMovement(direction);
-            controller.Move(direction * speed *Time.deltaTime);
-            
+            controller.Move(direction * speed * Time.deltaTime);
+
         }
     }
 
@@ -62,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, rotationAngle, 0f);
     }
 
-    
+
 
 
 }

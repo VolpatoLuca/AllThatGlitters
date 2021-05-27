@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Nightmare
   m_EditorClassIdentifier: 
   difficultyName: Nightmare
-  roomAmount: 60
+  roomAmount: 300
   friendlyRobotsAmount: 5
   enemyRobotsAmount: 10

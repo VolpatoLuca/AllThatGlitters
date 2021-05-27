@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
         currentEnergy = maxEnergy;
         isFull = true;
         //UI
-        //UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
 
     }
 
@@ -38,42 +38,38 @@ public class PlayerStats : MonoBehaviour
         if (energyDiff > 0)
         {
             currentEnergy = energyDiff;
-            //UI
-            //UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
         }
         else
         {
             currentEnergy = 0;
             Debug.Log("Muerto");
-            //UI
-            //UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
         }
+        //UI
+        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
     }
 
     public void RefillEnergy(int energyRefill)
     {
         int energySum = currentEnergy += energyRefill;
         //play sound
-        if (energySum>=maxEnergy)
+        if (energySum >= maxEnergy)
         {
             currentEnergy = maxEnergy;
             Debug.Log("Full Energy");
             isFull = true;
-            //UI
-            //non serve aggiornare
         }
         else
         {
             currentEnergy = energySum;
             isFull = false;
             //UI
-            //UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+            UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
         }
     }
 
 
     float NormalizeEnergy(int maxEnergy, int currentEnergy) //mi serve per dare un valore sensato allo slider DA ZERO A 1
-    {        
+    {
         float max = (float)maxEnergy;
         float current = (float)currentEnergy;
         float normalizedEnergy = Mathf.InverseLerp(0, max, current);
@@ -85,7 +81,7 @@ public class PlayerStats : MonoBehaviour
     {
         robotsSaved++;
         //UI
-        //mettere qui la roba del ui manager
+        GameManager.singleton.CurrentRescuedRobots = robotsSaved;
     }
 
 

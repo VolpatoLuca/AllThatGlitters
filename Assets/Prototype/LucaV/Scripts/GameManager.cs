@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public delegate void ManagerEvent();
     public event ManagerEvent RoomsGenerated;
     public event ManagerEvent LevelReset;
+    public GameObject playerPrefab;
     public Room[] rooms;
     public Room[] endRooms;
     public Room[] hallwayRooms;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<PropGenerator> enemyGenerators = new List<PropGenerator>();
     [HideInInspector] public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
     public Vector3 startPos { get; set; }
+    public int CurrentRescuedRobots { get; set; }
     public int RoomNumber { get; set; }
     public int minRooms;
     public int EnemyRobotsNumber { get; set; }
@@ -71,6 +73,8 @@ public class GameManager : MonoBehaviour
                 SetupLevel();
             }
         }
+
+        UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
     }
 
     /// <summary>
@@ -99,7 +103,8 @@ public class GameManager : MonoBehaviour
             SelectSpawners(enemyGenerators, maxEnemyRobots);
         if (friendsGenerators.Count > 0)
             SelectSpawners(friendsGenerators, maxFriendlyRobots);
-
+        Camera.main.gameObject.SetActive(false);
+        Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
         RoomsGenerated?.Invoke();
     }
 
@@ -141,5 +146,6 @@ public class GameManager : MonoBehaviour
         roomDistances.Clear();
         generateWaitTime = 1;
         hasGenerated = false;
+        CurrentRescuedRobots = 0;
     }
 }

@@ -6,6 +6,8 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager singleton;
+
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject gameCanvas;
@@ -18,6 +20,18 @@ public class UIManager : MonoBehaviour
 
     private int currentDiff = 0;
     private string currentDiffName = "";
+
+    private void Awake()
+    {
+        if (singleton == null)
+        {
+            singleton = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     private void Start()
     {

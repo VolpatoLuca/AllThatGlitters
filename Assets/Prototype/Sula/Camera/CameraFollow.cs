@@ -5,10 +5,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField]Vector3 maxCameraOffset;
+    [SerializeField] Vector3 maxCameraOffset;
     Vector3 minCameraOffset;
     Vector3 currentCameraOffset;
-    
+    [SerializeField] private bool calculateOffset;
+
     [SerializeField]
     float smoothSpeed = 0.01f;
 
@@ -18,8 +19,9 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        maxCameraOffset = transform.position;
-        minCameraOffset = maxCameraOffset / 2; //boh l'ho messo la metà giusto per ora
+        transform.parent = null;
+        maxCameraOffset = transform.position - player.transform.position;
+        minCameraOffset = Vector3.Lerp(player.transform.position, maxCameraOffset, .5f);
         currentCameraOffset = maxCameraOffset;
     }
     private void LateUpdate()
@@ -32,14 +34,14 @@ public class CameraFollow : MonoBehaviour
     private void Follow()
     {
         Vector3 desiredPosition = currentCameraOffset + player.transform.position; //al momento il player è sollevato di 1 su Y
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition,smoothSpeed);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
     }
 
     void cameraZoom()
     {
         if (Input.mouseScrollDelta != Vector2.zero)
-        {           
+        {
             //mi serve solo la y 1, -1
             float yScrollValue = Input.mouseScrollDelta.y;
             //lo rendo frame indipendent, lo moltiplico per una velocità e lo clampo per usarlo nel lerp
@@ -49,5 +51,5 @@ public class CameraFollow : MonoBehaviour
             //si smootha da solo nella funzione di follow (che fortuna)
         }
     }
- 
+
 }

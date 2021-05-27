@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager singleton;
 
     [SerializeField] private GameObject startRoom;
+    [SerializeField] private Texture2D cursorTexture;
 
     public delegate void ManagerEvent();
     public event ManagerEvent RoomsGenerated;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private float generateWaitTime = 1f;
     private bool hasGenerated = false;
+    private CursorMode cursorMode = CursorMode.Auto;
     private void Awake()
     {
         if (singleton == null)
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameState = GameState.waitingInput;
+        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
     }
 
 
@@ -70,13 +73,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void StartLevelGeneration()
+    /// <summary>
+    /// Generates level
+    /// </summary>
+    public void StartLevelGeneration()
     {
         gameState = GameState.loading;
         Instantiate(startRoom, transform.position, Quaternion.identity);
     }
-
-    public void SetupLevel()
+    private void SetupLevel()
     {
         gameState = GameState.playing;
         float maxDistance = 0;
@@ -135,5 +140,6 @@ public class GameManager : MonoBehaviour
         friendsGenerators.Clear();
         roomDistances.Clear();
         generateWaitTime = 1;
+        hasGenerated = false;
     }
 }

@@ -23,6 +23,7 @@ public class NavmeshManager : MonoBehaviour
 
     private void BakeSurface()
     {
+        print("bako");
         navMeshSurface.BuildNavMesh();
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8150f7fab637a394483dfb5dcd4b5d8c, type: 3}
   m_Name: Tutorial
   m_EditorClassIdentifier: 
-  difficulty: Tutorial
+  difficultyName: Tutorial
   roomAmount: 5
   friendlyRobotsAmount: 3
   enemyRobotsAmount: 0

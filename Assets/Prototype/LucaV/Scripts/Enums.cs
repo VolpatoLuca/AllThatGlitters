@@ -11,5 +11,6 @@ public enum GameState
     waitingInput,
     loading,
     playing,
-    gameOver
+    gameOver,
+    pause
 }

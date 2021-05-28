@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private void ManageMovement()
     {
 
-        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? 0.0f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
+        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.5f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
 
         //ISGROUNDED è RETARD   
 

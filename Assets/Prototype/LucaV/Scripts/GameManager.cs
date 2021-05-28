@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject startRoom;
     [SerializeField] private Texture2D cursorTexture;
+    [SerializeField] private Material floorMat;
 
     public delegate void ManagerEvent();
     public event ManagerEvent RoomsGenerated;
     public event ManagerEvent LevelReset;
     public GameObject playerPrefab;
+    public GameObject player;
     public Room[] rooms;
     public Room[] endRooms;
     public Room[] hallwayRooms;
@@ -74,7 +76,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
+        if (gameState == GameState.playing)
+        {
+            UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
+            floorMat.SetVector("_Pos", player.transform.position);
+        }
     }
 
     /// <summary>
@@ -104,7 +110,7 @@ public class GameManager : MonoBehaviour
         if (friendsGenerators.Count > 0)
             SelectSpawners(friendsGenerators, maxFriendlyRobots);
         Camera.main.gameObject.SetActive(false);
-        Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
+        player = Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
         RoomsGenerated?.Invoke();
     }
 

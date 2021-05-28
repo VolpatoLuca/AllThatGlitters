@@ -9,9 +9,9 @@ public class FriendlyRobot : Robot
 
     protected override void Update()
     {
-        if (player != null && isActivated && !isFollowing)
+        if (player != null && isActivated && !startedFollowing)
         {
-            isFollowing = true;
+            startedFollowing = true;
             StartCoroutine(FollowPlayer(player, distanceThreshold));
         }
     }

@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     [Header("Menu Canvas")]
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject menuCanvas;
+    [Header("How To Play Canvas")]
+    [SerializeField] private GameObject howToPlayCanvas;
     [Header("Loading Canvas")]
     [SerializeField] private GameObject loadingLevelCanvas;
     [SerializeField] private TMP_Text loadingLevelText;
@@ -62,6 +64,9 @@ public class UIManager : MonoBehaviour
         menuCanvas.SetActive(true);
         loadingLevelCanvas.SetActive(false);
         inGameMenuCanvas.SetActive(false);
+        howToPlayCanvas.SetActive(false);
+        victoryCanvas.SetActive(false);
+        defeatCanvas.SetActive(false);
 
         dropdown.ClearOptions();
         List<string> difficultyNames = new List<string>();
@@ -215,5 +220,10 @@ public class UIManager : MonoBehaviour
         GameObject o = hasPlayerWon ? victoryCanvas : defeatCanvas;
         o.SetActive(true);
         inGameMenuCanvas.SetActive(false);
+    }
+
+    public void ToggleHowToPlayCanvas(bool b)
+    {
+        howToPlayCanvas.SetActive(b);
     }
 }

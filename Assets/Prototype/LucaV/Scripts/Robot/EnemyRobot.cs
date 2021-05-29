@@ -38,9 +38,9 @@ public class EnemyRobot : Robot
                 agent.isStopped = true;
             }
 
-            if (Vector3.Distance(transform.position, player.position) < energyRange)
+            if (Vector3.Distance(transform.position, player.position) < energyRange && GameManager.singleton.gameState == GameState.playing)
             {
-                pStats.ConsumeEnergy(1 * Time.deltaTime);
+                pStats.ConsumeEnergy(energySteal * Time.deltaTime);
             }
         }
     }
@@ -54,5 +54,4 @@ public class EnemyRobot : Robot
     {
         base.OnPlayerNearby(_player);
     }
-
 }

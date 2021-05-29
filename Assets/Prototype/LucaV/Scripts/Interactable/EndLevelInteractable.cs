@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndLevelInteractable : MonoBehaviour
+public class EndLevelInteractable : Interactable
 {
     private Room thisRoom;
     private void OnEnable()
@@ -20,5 +20,10 @@ public class EndLevelInteractable : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public override void Interact()
+    {
+        GameManager.singleton.EndLevelInteracted();
     }
 }

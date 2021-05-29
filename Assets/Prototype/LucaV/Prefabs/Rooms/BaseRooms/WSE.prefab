@@ -962,6 +962,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PropSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2778587954667109985, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
+      propertyPath: props.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778587954667109985, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
+      propertyPath: props.Array.data[0]
+      value: 
+      objectReference: {fileID: 4974864344949147884, guid: 16bd671f73fcbc049b6a0aa34f6bccbe, type: 3}
     - target: {fileID: 4156768576282780499, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
       propertyPath: m_RootOrder
       value: 4

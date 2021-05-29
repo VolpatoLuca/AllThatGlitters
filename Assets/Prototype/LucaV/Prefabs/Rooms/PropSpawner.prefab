@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da82893dd46449e4fa0d34bb672a4f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  props:
-  - {fileID: 4974864344949147884, guid: 16bd671f73fcbc049b6a0aa34f6bccbe, type: 3}
+  props: []
+  canSpawn: 0

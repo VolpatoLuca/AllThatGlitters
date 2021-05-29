@@ -6,34 +6,39 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager singleton;
 
+    [Header("ROOMS")]
     [SerializeField] private GameObject startRoom;
-    [SerializeField] private Texture2D cursorTexture;
-    [SerializeField] private Material floorMat;
-
-    public delegate void ManagerEvent();
-    public event ManagerEvent RoomsGenerated;
-    public event ManagerEvent LevelReset;
-    public GameObject playerPrefab;
-    public GameObject player;
     public Room[] rooms;
     public Room[] endRooms;
     public Room[] hallwayRooms;
+
+    public delegate void ManagerEvent();
+    public event ManagerEvent RoomsGenerated;
+    public event ManagerEvent LevelGenerated;
+    public event ManagerEvent LevelReset;
+    [Header("Assets")]
+    [SerializeField] private Texture2D cursorTexture;
+    [SerializeField] private Material floorMat;
+    public GameObject playerPrefab;
+    public GameObject Player { get; set; }
+    public GameObject endLevelInteractable;
     [HideInInspector] public GameState gameState;
     [HideInInspector] public Dictionary<Room, float> roomDistances = new Dictionary<Room, float>();
-    [HideInInspector] public GameObject endLevelInteractable;
     [HideInInspector] public List<PropGenerator> enemyGenerators = new List<PropGenerator>();
     [HideInInspector] public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
     public Vector3 startPos { get; set; }
     public int CurrentRescuedRobots { get; set; }
     public int RoomNumber { get; set; }
-    public int minRooms;
-    public int EnemyRobotsNumber { get; set; }
-    public int maxEnemyRobots;
-    public int FriendlyRobotsNumber { get; set; }
-    public int maxFriendlyRobots;
+
+    public int MinRooms { get; set; }
+    [HideInInspector] public int enemyRobotsNumber;
+    public int MaxEnemyRobots { get; set; }
+    [HideInInspector] public int friendlyRobotsNumber;
+    public int MaxFriendlyRobots { get; set; }
 
     private float generateWaitTime = 1f;
-    private bool hasGenerated = false;
+    private bool hasGeneratedRooms = false;
+    private bool hasGeneratedLevel = false;
     private CursorMode cursorMode = CursorMode.Auto;
     private void Awake()
     {
@@ -66,12 +71,19 @@ public class GameManager : MonoBehaviour
             ResetLevel();
         }
 
-        if (RoomNumber > minRooms)
+        if (enemyRobotsNumber >= MaxEnemyRobots && friendlyRobotsNumber >= MaxFriendlyRobots && !hasGeneratedLevel && gameState == GameState.loading)
+        {
+            hasGeneratedLevel = true;
+            gameState = GameState.playing;
+            LevelGenerated?.Invoke();
+        }
+
+        if (RoomNumber > MinRooms)
         {
             generateWaitTime -= Time.deltaTime;
-            if (generateWaitTime <= 0 && !hasGenerated)
+            if (generateWaitTime <= 0 && !hasGeneratedRooms)
             {
-                hasGenerated = true;
+                hasGeneratedRooms = true;
                 SetupLevel();
             }
         }
@@ -79,7 +91,7 @@ public class GameManager : MonoBehaviour
         if (gameState == GameState.playing)
         {
             UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
-            floorMat.SetVector("_Pos", player.transform.position);
+            floorMat.SetVector("_Pos", Player.transform.position);
         }
     }
 
@@ -93,7 +105,7 @@ public class GameManager : MonoBehaviour
     }
     private void SetupLevel()
     {
-        gameState = GameState.playing;
+        gameState = GameState.loading;
         float maxDistance = 0;
         Room endRoom = null;
         foreach (var room in roomDistances)
@@ -104,20 +116,22 @@ public class GameManager : MonoBehaviour
                 endRoom = room.Key;
             }
         }
+        Player = Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
         endRoom.IsEndRoom = true;
         if (enemyGenerators.Count > 0)
-            SelectSpawners(enemyGenerators, maxEnemyRobots);
+            SelectSpawners(enemyGenerators, MaxEnemyRobots, out enemyRobotsNumber);
         if (friendsGenerators.Count > 0)
-            SelectSpawners(friendsGenerators, maxFriendlyRobots);
+            SelectSpawners(friendsGenerators, MaxFriendlyRobots, out friendlyRobotsNumber);
         Camera.main.gameObject.SetActive(false);
-        player = Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
         RoomsGenerated?.Invoke();
     }
 
-    private void SelectSpawners(List<PropGenerator> list, int spawnAmount)
+    private void SelectSpawners(List<PropGenerator> list, int spawnAmount, out int spawnCount)
     {
+        spawnCount = 0;
         for (int i = 0; i < spawnAmount; i++)
         {
+            spawnCount++;
             int rand = Random.Range(0, list.Count);
             list[rand].canSpawn = true;
             list.RemoveAt(rand);
@@ -126,9 +140,9 @@ public class GameManager : MonoBehaviour
 
     public void SetDifficulty(LevelDifficulty diff)
     {
-        maxEnemyRobots = diff.enemyRobotsAmount;
-        maxFriendlyRobots = diff.friendlyRobotsAmount;
-        minRooms = diff.roomAmount;
+        MaxEnemyRobots = diff.enemyRobotsAmount;
+        MaxFriendlyRobots = diff.friendlyRobotsAmount;
+        MinRooms = diff.roomAmount;
     }
 
     public void OnLevelFinish(bool hasPlayerWon)
@@ -144,14 +158,26 @@ public class GameManager : MonoBehaviour
     public void ResetLevel()
     {
         LevelReset?.Invoke();
-        EnemyRobotsNumber = 0;
+        enemyRobotsNumber = 0;
         RoomNumber = 0;
-        FriendlyRobotsNumber = 0;
+        friendlyRobotsNumber = 0;
         enemyGenerators.Clear();
         friendsGenerators.Clear();
         roomDistances.Clear();
         generateWaitTime = 1;
-        hasGenerated = false;
+        hasGeneratedRooms = false;
         CurrentRescuedRobots = 0;
+    }
+
+    public void EndLevelInteracted()
+    {
+        if (CurrentRescuedRobots >= MaxFriendlyRobots)
+        {
+            OnLevelFinish(true);
+        }
+        else
+        {
+            UIManager.singleton.ShowMissingRobots(MaxFriendlyRobots - friendlyRobotsNumber);
+        }
     }
 }

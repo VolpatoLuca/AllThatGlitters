@@ -11,15 +11,21 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject gameCanvas;
+    [SerializeField] private GameObject loadingLevelCanvas;
+    [SerializeField] private GameObject victoryCanvas;
+    [SerializeField] private GameObject defeatCanvas;
     [SerializeField] private GameObject inGameMenuCanvas;
     [SerializeField] private Slider energySlider;
     [SerializeField] private TMP_Text friendlyBotsText;
+    [SerializeField] private TMP_Text loadingLevelText;
+    [SerializeField] private TMP_Text missingRobotsText;
 
     [SerializeField] private LevelDifficulty[] difficulties;
     [SerializeField] private LevelDifficulty tutorialDiff;
 
     private int currentDiff = 0;
     private string currentDiffName = "";
+    private float loadingTimer;
 
     private void Awake()
     {
@@ -33,10 +39,21 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameManager.singleton.LevelGenerated += OnLevelGenerated;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.singleton.LevelGenerated -= OnLevelGenerated;
+    }
+
     private void Start()
     {
         gameCanvas.SetActive(false);
         menuCanvas.SetActive(true);
+        loadingLevelCanvas.SetActive(false);
         inGameMenuCanvas.SetActive(false);
 
         dropdown.ClearOptions();
@@ -54,6 +71,33 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PauseUnpauseGame();
+        }
+
+
+        if (GameManager.singleton.gameState == GameState.loading)
+        {
+            loadingTimer += Time.deltaTime * 2.7f;
+            int module = (int)loadingTimer % 4;
+            string dots = "";
+            switch (module)
+            {
+                case 0:
+                    dots = "";
+                    break;
+                case 1:
+                    dots = ".";
+                    break;
+                case 2:
+                    dots = "..";
+                    break;
+                case 3:
+                    dots = "...";
+                    break;
+                default:
+                    break;
+            }
+
+            loadingLevelText.text = "GENERATING LEVEL" + dots;
         }
     }
 
@@ -83,10 +127,11 @@ public class UIManager : MonoBehaviour
     private void StartLevel(LevelDifficulty diff)
     {
         GameManager.singleton.SetDifficulty(diff);
-        gameCanvas.SetActive(true);
+        loadingLevelCanvas.SetActive(true);
         menuCanvas.SetActive(false);
         GameManager.singleton.StartLevelGeneration();
     }
+
     /// <summary>
     /// Toggle pause menu
     /// </summary>
@@ -110,7 +155,7 @@ public class UIManager : MonoBehaviour
     public void UpdateBotsText(int rescuedBots)
     {
         if (friendlyBotsText)
-            friendlyBotsText.text = "BOTS RESCUED: " + rescuedBots + "/" + GameManager.singleton.maxFriendlyRobots;
+            friendlyBotsText.text = "BOTS RESCUED: " + rescuedBots + "/" + GameManager.singleton.MaxFriendlyRobots;
     }
 
     /// <summary>
@@ -121,5 +166,47 @@ public class UIManager : MonoBehaviour
     {
         if (energySlider)
             energySlider.value = Mathf.Clamp(percentage, 0, 1);
+    }
+
+    private void OnLevelGenerated()
+    {
+        loadingLevelCanvas.SetActive(false);
+        gameCanvas.SetActive(true);
+    }
+
+    public void ShowMissingRobots(int val)
+    {
+        missingRobotsText.text = "YOU NEED " + val + " MORE ROBOTS!";
+        missingRobotsText.color = Color.red;
+        StartCoroutine(ReduceAlphaOverTime(missingRobotsText));
+    }
+
+    IEnumerator ReduceAlphaOverTime(TMP_Text txt)
+    {
+        Color c = txt.color;
+        yield return new WaitForSeconds(1f);
+        while (txt.color.a >= 0)
+        {
+            c.a -= Time.deltaTime;
+            yield return null;
+        }
+        txt.text = "";
+        yield return null;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        GameManager.singleton.ResetLevel();
+        menuCanvas.SetActive(true);
+        inGameMenuCanvas.SetActive(false);
+        victoryCanvas.SetActive(false);
+        defeatCanvas.SetActive(false);
+    }
+
+    public void ShowEndGameCanvas(bool hasPlayerWon)
+    {
+        GameObject o = hasPlayerWon ? victoryCanvas : defeatCanvas;
+        o.SetActive(true);
+        inGameMenuCanvas.SetActive(false);
     }
 }

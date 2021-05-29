@@ -11,6 +11,7 @@ public class FriendlyRobot : Robot
     {
         if (player != null && isActivated && !startedFollowing)
         {
+            GameManager.singleton.CurrentRescuedRobots++;
             startedFollowing = true;
             StartCoroutine(FollowPlayer(player, distanceThreshold));
         }
@@ -26,6 +27,4 @@ public class FriendlyRobot : Robot
     {
         base.OnPlayerNearby(_player);
     }
-
-
 }

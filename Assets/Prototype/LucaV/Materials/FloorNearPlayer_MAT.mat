@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Floor_MAT
+  m_Name: FloorNearPlayer_MAT
   m_Shader: {fileID: -6465566751694194690, guid: 9f6980a28dce0214a92287b6ba4b9a3a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -97,12 +97,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_1a1354b3e1c8490da6a14af7acea942d: 0
+    - Boolean_1a1354b3e1c8490da6a14af7acea942d: 1
     - Vector1_19fabd89ea7b4ec28c2e87cd1827aeed: 3.3
     - Vector1_38ae0ea91cae4e208f47486439e9d769: 1
-    - Vector1_3fd2c77696d74de4b320770406245f79: 0.2
+    - Vector1_3fd2c77696d74de4b320770406245f79: 15
     - Vector1_5971b5f28d214c8faf467cd65fed4a4a: 0.05
     - Vector1_8932f89c90274dbabebbab47c79177e3: 0
+    - Vector1_aa650f889b8041b395550bd071855df7: 0
     - Vector1_c5a10dbefa304ff1995117e8de21c686: 0.4
     - Vector1_c80814292fe346618bd3cd0189331a18: 0.5
     - Vector1_cd0a860db054463a95473d54fe1e42ee: 0
@@ -140,10 +141,10 @@ Material:
     - Vector2_66fc0adb09064bdba182833e486ea6d9: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_86334669708044ab89a0c8a8ae7dd11c: {r: 0.5, g: 0.5, b: 0, a: 0}
     - Vector2_95198ebc938948a1950beeaa3baaae28: {r: 0.05, g: 0.05, b: 0, a: 0}
-    - Vector2_a609fed6bcd344ae8f12bcac8999dd9e: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_a609fed6bcd344ae8f12bcac8999dd9e: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Pos: {r: -14.918907, g: 0.5799998, b: 17.32506, a: 0}
+    - _Pos: {r: 40.146385, g: 0, b: -261.28107, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

@@ -7,8 +7,6 @@ public class PlayerInputs : MonoBehaviour
     //INPUTS VARI
     public float rawInputHorizontal = 0;
     public float rawInputVertical = 0;
-    public float InputHorizontal;
-    public float InputVertical;
     public bool inputQ;
 
 
@@ -22,8 +20,6 @@ public class PlayerInputs : MonoBehaviour
     {
         rawInputHorizontal = Input.GetAxisRaw("Horizontal");
         rawInputVertical = Input.GetAxisRaw("Vertical");
-        InputHorizontal = Input.GetAxis("Horizontal");
-        InputVertical = Input.GetAxis("Vertical");
         inputQ = Input.GetKeyDown(KeyCode.Q);
     }
 

@@ -33,18 +33,16 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         isGrounded = controller.isGrounded;
-        if (GameManager.singleton.gameState == GameState.playing)
-        {
-            ManageMovement();
-        }
+        //if (GameManager.singleton.gameState == GameState.playing)
+        //{
+        ManageMovement();
+        //}
     }
 
     private void ManageMovement()
     {
 
-        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? 0.0f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
-
-        //ISGROUNDED è RETARD   
+        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? 0.01f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento  
 
         if (direction.magnitude >= 0.1f)
         {

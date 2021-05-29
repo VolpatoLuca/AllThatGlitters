@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     //[SerializeField]
     public int maxEnergy = 10;
     //[SerializeField]
-    public int currentEnergy;
+    public float currentEnergy;
 
 
     public bool isFull { get; private set; }
@@ -29,9 +29,9 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    public void ConsumeEnergy(int energyConsumed)
+    public void ConsumeEnergy(float energyConsumed)
     {
-        int energyDiff = currentEnergy -= energyConsumed;
+        float energyDiff = currentEnergy -= energyConsumed;
         isFull = false;
         //play sound
 
@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour
 
     public void RefillEnergy(int energyRefill)
     {
-        int energySum = currentEnergy += energyRefill;
+        float energySum = currentEnergy += energyRefill;
         //play sound
         if (energySum >= maxEnergy)
         {
@@ -68,9 +68,9 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    float NormalizeEnergy(int maxEnergy, int currentEnergy) //mi serve per dare un valore sensato allo slider DA ZERO A 1
+    float NormalizeEnergy(int maxEnergy, float currentEnergy) //mi serve per dare un valore sensato allo slider DA ZERO A 1
     {
-        float max = (float)maxEnergy;
+        float max = maxEnergy;
         float current = (float)currentEnergy;
         float normalizedEnergy = Mathf.InverseLerp(0, max, current);
         return normalizedEnergy;

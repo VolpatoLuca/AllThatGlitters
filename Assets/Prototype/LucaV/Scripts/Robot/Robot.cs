@@ -7,8 +7,9 @@ using UnityEngine;
 public abstract class Robot : MonoBehaviour
 {
 
-    protected bool isFollowing = false;
+    protected bool startedFollowing = false;
     protected Transform player;
+    protected PlayerStats pStats;
     protected NavMeshAgent agent;
 
     protected virtual void Start()
@@ -37,6 +38,8 @@ public abstract class Robot : MonoBehaviour
     protected virtual void OnPlayerNearby(GameObject _player)
     {
         player = _player.transform;
+        if (!pStats)
+            pStats = player.GetComponent<PlayerStats>();
     }
 
     protected IEnumerator FollowPlayer(Transform target, float offset)

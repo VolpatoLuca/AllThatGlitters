@@ -82,9 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9ee5b71a7766b429a19a5d8f5e4b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceThreshold: 1
   moveSpeed: 2
   maxEnergy: 3
+  energyRange: 5
 --- !u!136 &4974864344949147885
 CapsuleCollider:
   m_ObjectHideFlags: 0

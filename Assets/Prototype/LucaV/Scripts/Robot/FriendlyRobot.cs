@@ -9,9 +9,10 @@ public class FriendlyRobot : Robot
 
     protected override void Update()
     {
-        if (player != null && isActivated && !isFollowing)
+        if (player != null && isActivated && !startedFollowing)
         {
-            isFollowing = true;
+            GameManager.singleton.CurrentRescuedRobots++;
+            startedFollowing = true;
             StartCoroutine(FollowPlayer(player, distanceThreshold));
         }
     }
@@ -26,6 +27,4 @@ public class FriendlyRobot : Robot
     {
         base.OnPlayerNearby(_player);
     }
-
-
 }

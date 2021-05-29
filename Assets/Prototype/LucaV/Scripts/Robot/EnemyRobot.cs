@@ -7,6 +7,9 @@ public class EnemyRobot : Robot
 {
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private int maxEnergy;
+    [SerializeField] private float energyRange = 5;
+    [Tooltip("Energy stole each second")]
+    [SerializeField] private float energySteal = 3f;
     private float currentEnergy;
     private bool isActive;
 
@@ -19,13 +22,13 @@ public class EnemyRobot : Robot
 
     protected override void Update()
     {
-        if (player != null && !isFollowing)
+        if (player != null && !startedFollowing)
         {
-            isFollowing = true;
+            startedFollowing = true;
             isActive = true;
             StartCoroutine(FollowPlayer(player, 0));
         }
-        if (isFollowing && isActive)
+        if (startedFollowing && isActive)
         {
             currentEnergy -= Time.deltaTime;
             if (currentEnergy <= 0)
@@ -35,9 +38,9 @@ public class EnemyRobot : Robot
                 agent.isStopped = true;
             }
 
-            if (Vector3.Distance(transform.position, player.position) < 2f)
+            if (Vector3.Distance(transform.position, player.position) < energyRange)
             {
-                //remove player's energy
+                pStats.ConsumeEnergy(1 * Time.deltaTime);
             }
         }
     }

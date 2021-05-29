@@ -5,7 +5,7 @@ public enum Direction
     south,
     east
 }
-
+[System.Serializable]
 public enum GameState
 {
     waitingInput,

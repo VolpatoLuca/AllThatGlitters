@@ -5,11 +5,20 @@ using UnityEngine;
 public class EndLevelInteractable : MonoBehaviour
 {
     private Room thisRoom;
-    private void Start()
+    private void OnEnable()
     {
-        if(transform.parent.TryGetComponent(out thisRoom) && thisRoom.IsEndRoom)
+        GameManager.singleton.RoomsGenerated += CheckIfEndRoom;
+    }
+    private void OnDisable()
+    {
+        GameManager.singleton.RoomsGenerated -= CheckIfEndRoom;
+    }
+
+    private void CheckIfEndRoom()
+    {
+        if (transform.parent.TryGetComponent(out thisRoom) && !thisRoom.IsEndRoom)
         {
-            Instantiate(GameManager.singleton.endLevelInteractable, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

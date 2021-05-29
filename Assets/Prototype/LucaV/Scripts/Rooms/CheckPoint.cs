@@ -82,7 +82,7 @@ public class CheckPoint : MonoBehaviour
         }
 
         Room[] usedRooms;
-        if (++GameManager.singleton.RoomNumber <= GameManager.singleton.minRooms)
+        if (++GameManager.singleton.RoomNumber <= GameManager.singleton.MinRooms)
         {
             usedRooms = nonEndRooms;
         }

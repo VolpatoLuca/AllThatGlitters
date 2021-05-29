@@ -8,18 +8,25 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager singleton;
 
+    [Header("Menu Canvas")]
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject menuCanvas;
-    [SerializeField] private GameObject gameCanvas;
+    [Header("Loading Canvas")]
     [SerializeField] private GameObject loadingLevelCanvas;
-    [SerializeField] private GameObject victoryCanvas;
-    [SerializeField] private GameObject defeatCanvas;
-    [SerializeField] private GameObject inGameMenuCanvas;
+    [SerializeField] private TMP_Text loadingLevelText;
+    [SerializeField] private Slider loadingSlider;
+    [Header("Game Canvas")]
+    [SerializeField] private GameObject gameCanvas;
     [SerializeField] private Slider energySlider;
     [SerializeField] private TMP_Text friendlyBotsText;
-    [SerializeField] private TMP_Text loadingLevelText;
     [SerializeField] private TMP_Text missingRobotsText;
-
+    [Header("In Game Menu Canvas")]
+    [SerializeField] private GameObject inGameMenuCanvas;
+    [Header("Victory Canvas")]
+    [SerializeField] private GameObject victoryCanvas;
+    [Header("Defeat Canvas")]
+    [SerializeField] private GameObject defeatCanvas;
+    [Space]
     [SerializeField] private LevelDifficulty[] difficulties;
     [SerializeField] private LevelDifficulty tutorialDiff;
 
@@ -96,7 +103,7 @@ public class UIManager : MonoBehaviour
                 default:
                     break;
             }
-
+            loadingSlider.value = Mathf.Clamp(GameManager.singleton.RoomNumber / (float)GameManager.singleton.MinRooms, 0, 1);
             loadingLevelText.text = "GENERATING LEVEL" + dots;
         }
     }

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject Player { get; set; }
     public GameObject endLevelInteractable;
-    [HideInInspector] public GameState gameState;
+    public GameState gameState;
     [HideInInspector] public Dictionary<Room, float> roomDistances = new Dictionary<Room, float>();
     [HideInInspector] public List<PropGenerator> enemyGenerators = new List<PropGenerator>();
     [HideInInspector] public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
+        gameState = GameState.waitingInput;
         LevelReset?.Invoke();
         enemyRobotsNumber = 0;
         RoomNumber = 0;
@@ -167,6 +168,7 @@ public class GameManager : MonoBehaviour
         generateWaitTime = 1;
         hasGeneratedRooms = false;
         CurrentRescuedRobots = 0;
+        hasGeneratedLevel = false;
     }
 
     public void EndLevelInteracted()

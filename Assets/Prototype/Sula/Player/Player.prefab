@@ -166,9 +166,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 4
-  m_Range: 10
-  m_SpotAngle: 67
-  m_InnerSpotAngle: 51
+  m_Range: 6.5
+  m_SpotAngle: 125
+  m_InnerSpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -511,13 +511,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0bb5e4d4e763fd4ca3b674cf58be716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strongRadius: 9
   torch: {fileID: 153042961897741256}
+  strongRange: 9.5
+  intensityStrong: 6
   lightActivationPrice: 1
   lightUsagePrice: 1
   lightUsageDelay: 1
   maxLoopDiConsumo: 5
   torchDuration: 0
-  enoughEnergy: 0
 --- !u!114 &8169024676092530180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,8 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933f27ed8a5cf43359d7caf0a5f5e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 5
-  viewAngle: 65
+  viewRadius: 6
+  viewAngle: 110
   targetMask:
     serializedVersion: 2
     m_Bits: 256

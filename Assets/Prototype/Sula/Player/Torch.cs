@@ -7,31 +7,45 @@ public class Torch : MonoBehaviour
     //REF
     PlayerStats stats;
     PlayerInputs inputs;
+    FieldOfView fieldOfView;
 
-    [SerializeField]
-    Light torch;
+    //FieldOfView
+    [Header("Settings")]
+    float baseRadius;
+    [SerializeField] float strongRadius = 9f;
+    
+    //Torch
+    [SerializeField] Light torch; //per ora va draggata
+    float baseRange;
+    [SerializeField] float strongRange;
+    float intensityBase;
+    [SerializeField] float intensityStrong;
+
+    //Torch behaviour
+    [Header("Torch behaviour")]
     bool isActive;
-    [SerializeField]
-    int lightActivationPrice = 1;
-    [SerializeField]
-    int lightUsagePrice = 1;
-    [SerializeField]
-    int lightUsageDelay = 1;
-    [SerializeField]
-    int maxLoopDiConsumo = 5; //da rinominare
-    [SerializeField]
-    int torchDuration; // so che sarà n° di loop per secondi di attesa maxLoopDiConsumo*lightUsageDelay. vorrei far editare questo e non maxLoopDiConsumo
-    [SerializeField]
+    [SerializeField] int lightActivationPrice = 1;
+    [SerializeField] int lightUsagePrice = 1;
+    [SerializeField] int lightUsageDelay = 1;
+    [SerializeField] int maxLoopDiConsumo = 5; //da rinominare
+    [SerializeField] int torchDuration; // so che sarà n° di loop per secondi di attesa maxLoopDiConsumo*lightUsageDelay. vorrei far editare questo e non maxLoopDiConsumo
     bool enoughEnergy;
-
-
 
     private void Start()
     {
         stats = GetComponent<PlayerStats>();
         inputs = GetComponent<PlayerInputs>();
+        fieldOfView = GetComponent<FieldOfView>();
+        //assegno i valori attuali
+        PopulateBaseValues();
     }
 
+    private void PopulateBaseValues()
+    {
+        baseRadius = fieldOfView.viewRadius;
+        baseRange = torch.range;
+        intensityBase = torch.intensity;
+    }
 
     private void Update()
     {     
@@ -52,26 +66,30 @@ public class Torch : MonoBehaviour
             }
             if (!isActive && enoughEnergy)
             {
-                TurnOn();
+                StrongLight();
             }
             else if(isActive) //se è accesa
             {
-                TurnOff();
+                StandardLight();
             }
         }
     }
 
-    private void TurnOn()
+    private void StrongLight()
     {
-        torch.enabled = true;
+        fieldOfView.viewRadius = strongRadius;
+        torch.range = strongRange;
+        torch.intensity = intensityStrong;
         isActive = true;
         StartCoroutine("BatteryUsage"); //faccio partire il timer che consuma l'energia
         //play sound
     }
 
-    private void TurnOff()
+    private void StandardLight()
     {
-        torch.enabled = false;
+        fieldOfView.viewRadius = baseRadius;
+        torch.range = baseRange;
+        torch.intensity = intensityBase;
         isActive = false;
         //play sound
     }
@@ -87,7 +105,7 @@ public class Torch : MonoBehaviour
             yield return new WaitForSeconds(lightUsageDelay); //ogni quanto consumo
         }
 
-        TurnOff();
+        StandardLight();
     }
 
     void EnergySafety()

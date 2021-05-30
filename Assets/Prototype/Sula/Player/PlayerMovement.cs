@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     bool isGrounded;
 
+    //rotation stuff
+    public Vector3 worldPosOnPlane;
+    Vector3 target;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -35,20 +39,20 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = controller.isGrounded;
         //if (GameManager.singleton.gameState == GameState.playing)
         //{
+        LookAtCursor();
         ManageMovement();
         //}
     }
 
     private void ManageMovement()
     {
-
-
-        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.5f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
-
+        
+        Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.1f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
 
         if (direction.magnitude >= 0.1f)
         {
-            RotateTowardsMovement(direction);
+            //RotateTowardsMovement(direction);
+            
             controller.Move(direction * speed * Time.deltaTime);
 
         }
@@ -65,7 +69,17 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, rotationAngle, 0f);
     }
 
+    void LookAtCursor()
+    {
+        Plane plane = new Plane(Vector3.up, 0); //creo un piano
+        if (plane.Raycast(inputs.mouseRay, out float distance))
+        {
+            worldPosOnPlane = inputs.mouseRay.GetPoint(distance);
+            target = new Vector3(worldPosOnPlane.x, transform.position.y,worldPosOnPlane.z );
+            transform.LookAt(target);
+        }
 
+    }
 
 
 }

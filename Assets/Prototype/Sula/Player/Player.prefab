@@ -146,13 +146,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227447915807666979}
-  m_LocalRotation: {x: -0.60876155, y: -0, z: -0, w: 0.79335326}
-  m_LocalPosition: {x: -0.156188, y: 1.2500174, z: -0.029998312}
+  m_LocalRotation: {x: -0.7071058, y: -0, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 3.0361912, y: 3.0361915, z: 3.0361915}
   m_Children: []
   m_Father: {fileID: 3787481560396051414}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -75, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!108 &153042961897741256
 Light:
   m_ObjectHideFlags: 0
@@ -160,15 +160,15 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227447915807666979}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 4
   m_Range: 10
-  m_SpotAngle: 71.150665
-  m_InnerSpotAngle: 29.527298
+  m_SpotAngle: 67
+  m_InnerSpotAngle: 51
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -463,9 +463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawInputHorizontal: 0
   rawInputVertical: 0
-  InputHorizontal: 0
-  InputVertical: 0
   inputQ: 0
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!114 &3787481561654535095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +483,7 @@ MonoBehaviour:
   turnSmoothingTime: 0.1
   gravity: -0.5
   isGrounded: 0
+  worldPosOnPlane: {x: 0, y: 0, z: 0}
 --- !u!114 &3787481561654535093
 MonoBehaviour:
   m_ObjectHideFlags: 0

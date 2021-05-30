@@ -8,12 +8,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Vector3 maxCameraOffset;
     Vector3 minCameraOffset;
     Vector3 currentCameraOffset;
-    [SerializeField] private bool calculateOffset;
 
     [SerializeField]
-    float smoothSpeed = 0.01f;
-
-    [SerializeField]
+    float smoothSpeed = 0.01f;    
     float zoomT;
     float scrollSpeed = 30f;
 
@@ -28,7 +25,6 @@ public class CameraFollow : MonoBehaviour
     {
         cameraZoom();
         Follow();
-
     }
 
     private void Follow()

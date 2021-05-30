@@ -211,6 +211,7 @@ public class UIManager : MonoBehaviour
         GameManager.singleton.ResetLevel();
         menuCanvas.SetActive(true);
         inGameMenuCanvas.SetActive(false);
+        gameCanvas.SetActive(false);
         victoryCanvas.SetActive(false);
         defeatCanvas.SetActive(false);
     }

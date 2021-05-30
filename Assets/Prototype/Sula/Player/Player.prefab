@@ -463,8 +463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawInputHorizontal: 0
   rawInputVertical: 0
-  InputHorizontal: 0
-  InputVertical: 0
   inputQ: 0
 --- !u!114 &3787481561654535095
 MonoBehaviour:
@@ -772,6 +770,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3787481561654535089}
+    - target: {fileID: 9095202079918539523, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095202079918539533, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095202079918539533, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095202079918539533, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095202079918539533, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9095202079918539533, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295

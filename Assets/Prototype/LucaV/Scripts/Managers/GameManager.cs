@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public Vector3 startPos { get; set; }
     public int CurrentRescuedRobots { get; set; }
     public int RoomNumber { get; set; }
-
+    public float playerTimer { get; set; }
     public int MinRooms { get; set; }
     [HideInInspector] public int enemyRobotsNumber;
     public int MaxEnemyRobots { get; set; }
@@ -55,8 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        gameState = GameState.waitingInput;
-        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
+
     }
 
 
@@ -90,6 +89,7 @@ public class GameManager : MonoBehaviour
 
         if (gameState == GameState.playing)
         {
+            playerTimer += Time.deltaTime;
             UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
             floorMat.SetVector("_Pos", Player.transform.position);
         }
@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
+        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
         gameState = GameState.waitingInput;
         LevelReset?.Invoke();
         enemyRobotsNumber = 0;
@@ -169,6 +170,7 @@ public class GameManager : MonoBehaviour
         hasGeneratedRooms = false;
         CurrentRescuedRobots = 0;
         hasGeneratedLevel = false;
+        playerTimer = 0;
     }
 
     public void EndLevelInteracted()

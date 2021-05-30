@@ -20,6 +20,10 @@ public class EndLevelInteractable : Interactable
         {
             Destroy(gameObject);
         }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     public override void Interact()

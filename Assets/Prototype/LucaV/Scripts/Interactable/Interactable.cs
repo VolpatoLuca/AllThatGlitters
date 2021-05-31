@@ -15,10 +15,10 @@ public abstract class Interactable : MonoBehaviour
             canvas.transform.eulerAngles = rot;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (canvas != null && canvas.activeSelf != IsPlayerNear)
-            canvas.SetActive(!IsPlayerNear);
+            canvas.SetActive(IsPlayerNear);
     }
     public abstract void Interact();
 }

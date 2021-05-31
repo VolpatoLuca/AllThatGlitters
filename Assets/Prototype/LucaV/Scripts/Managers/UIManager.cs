@@ -26,11 +26,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject inGameMenuCanvas;
     [Header("Victory Canvas")]
     [SerializeField] private GameObject victoryCanvas;
+    [SerializeField] private TMP_Text durationText;
     [Header("Defeat Canvas")]
     [SerializeField] private GameObject defeatCanvas;
     [Space]
     [SerializeField] private LevelDifficulty[] difficulties;
-    [SerializeField] private LevelDifficulty tutorialDiff;
 
     private int currentDiff = 0;
     private string currentDiffName = "";
@@ -131,10 +131,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnPlayTutorial()
-    {
-        StartLevel(tutorialDiff);
-    }
 
     private void StartLevel(LevelDifficulty diff)
     {
@@ -218,9 +214,19 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndGameCanvas(bool hasPlayerWon)
     {
-        GameObject o = hasPlayerWon ? victoryCanvas : defeatCanvas;
-        o.SetActive(true);
         inGameMenuCanvas.SetActive(false);
+        if (hasPlayerWon)
+        {
+            victoryCanvas.SetActive(true);
+            float timer = GameManager.singleton.playerTimer;
+            float minutes = Mathf.Floor(timer / 60);
+            float seconds = timer % 60;
+            durationText.text = "TIME    " + minutes.ToString("00") + ":" + seconds.ToString("00");
+        }
+        else
+        {
+            defeatCanvas.SetActive(true);
+        }
     }
 
     public void ToggleHowToPlayCanvas(bool b)

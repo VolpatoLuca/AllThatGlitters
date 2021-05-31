@@ -148,6 +148,7 @@ public class GameManager : MonoBehaviour
     public void OnLevelFinish(bool hasPlayerWon)
     {
         gameState = GameState.gameOver;
+        UIManager.singleton.ShowEndGameCanvas(hasPlayerWon);
     }
 
     public void SendRoomDistance(Room r, float d)

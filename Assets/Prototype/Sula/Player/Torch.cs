@@ -101,7 +101,6 @@ public class Torch : MonoBehaviour
         for (int i = 0; i < maxLoopDiConsumo; i++)
         {
             stats.ConsumeEnergy(lightUsagePrice); // consumo nel tempo
-            Debug.Log("la torcia sta consumando energia");
             yield return new WaitForSeconds(lightUsageDelay); //ogni quanto consumo
         }
 

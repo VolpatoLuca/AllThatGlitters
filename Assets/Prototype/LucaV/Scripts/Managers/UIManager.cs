@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     [Header("Menu Canvas")]
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject menuCanvas;
+    [Header("How To Play Canvas")]
+    [SerializeField] private GameObject howToPlayCanvas;
     [Header("Loading Canvas")]
     [SerializeField] private GameObject loadingLevelCanvas;
     [SerializeField] private TMP_Text loadingLevelText;
@@ -24,11 +26,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject inGameMenuCanvas;
     [Header("Victory Canvas")]
     [SerializeField] private GameObject victoryCanvas;
+    [SerializeField] private TMP_Text durationText;
     [Header("Defeat Canvas")]
     [SerializeField] private GameObject defeatCanvas;
     [Space]
     [SerializeField] private LevelDifficulty[] difficulties;
-    [SerializeField] private LevelDifficulty tutorialDiff;
 
     private int currentDiff = 0;
     private string currentDiffName = "";
@@ -62,6 +64,9 @@ public class UIManager : MonoBehaviour
         menuCanvas.SetActive(true);
         loadingLevelCanvas.SetActive(false);
         inGameMenuCanvas.SetActive(false);
+        howToPlayCanvas.SetActive(false);
+        victoryCanvas.SetActive(false);
+        defeatCanvas.SetActive(false);
 
         dropdown.ClearOptions();
         List<string> difficultyNames = new List<string>();
@@ -126,10 +131,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnPlayTutorial()
-    {
-        StartLevel(tutorialDiff);
-    }
 
     private void StartLevel(LevelDifficulty diff)
     {
@@ -206,14 +207,30 @@ public class UIManager : MonoBehaviour
         GameManager.singleton.ResetLevel();
         menuCanvas.SetActive(true);
         inGameMenuCanvas.SetActive(false);
+        gameCanvas.SetActive(false);
         victoryCanvas.SetActive(false);
         defeatCanvas.SetActive(false);
     }
 
     public void ShowEndGameCanvas(bool hasPlayerWon)
     {
-        GameObject o = hasPlayerWon ? victoryCanvas : defeatCanvas;
-        o.SetActive(true);
         inGameMenuCanvas.SetActive(false);
+        if (hasPlayerWon)
+        {
+            victoryCanvas.SetActive(true);
+            float timer = GameManager.singleton.playerTimer;
+            float minutes = Mathf.Floor(timer / 60);
+            float seconds = timer % 60;
+            durationText.text = "TIME    " + minutes.ToString("00") + ":" + seconds.ToString("00");
+        }
+        else
+        {
+            defeatCanvas.SetActive(true);
+        }
+    }
+
+    public void ToggleHowToPlayCanvas(bool b)
+    {
+        howToPlayCanvas.SetActive(b);
     }
 }

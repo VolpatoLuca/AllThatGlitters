@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider))]
 public class DiscoverableItem : MonoBehaviour
 {
     public bool IsDiscovered { get; private set; }
 
-    List<MeshRenderer> renderers = new List<MeshRenderer>();
+    [SerializeField] private List<MeshRenderer> renderers = new List<MeshRenderer>();
 
     private void Start()
     {

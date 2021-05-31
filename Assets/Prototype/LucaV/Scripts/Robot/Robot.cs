@@ -46,9 +46,18 @@ public abstract class Robot : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(target.position - (transform.position - target.position).normalized * offset, agent.destination) > 1f)
+            if (GameManager.singleton.gameState != GameState.playing)
             {
-                agent.SetDestination(target.position);
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
+
+                if (Vector3.Distance(target.position - (transform.position - target.position).normalized * offset, agent.destination) > 1f)
+                {
+                    agent.SetDestination(target.position);
+                }
             }
             yield return null;
         }

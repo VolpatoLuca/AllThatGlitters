@@ -6,7 +6,8 @@ public class Interact : MonoBehaviour
 {
     PlayerInputs inputs;
 
-    public Interactable availableInteractable;
+    public List<Interactable> availableInteractables;
+    public Interactable closestInteractable;
 
     private void Start()
     {
@@ -17,16 +18,51 @@ public class Interact : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Interactable>(out Interactable otherInteractable))
-        {
-            otherInteractable.isPlayerNear = true;
+        {            
+            availableInteractables.Add(otherInteractable);            
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.TryGetComponent<Interactable>(out Interactable otherInteractable))
         {
+            availableInteractables.Remove(otherInteractable);
             otherInteractable.isPlayerNear = false;
         }
     }
 
+    void FindClosestInteractable()
+    {
+        float maxDistance = Mathf.Infinity;
+        closestInteractable = null;
+
+        foreach (var interactable in availableInteractables)
+        {
+            float targetDistance = Vector3.Distance(transform.position, interactable.transform.position);
+            interactable.isPlayerNear = false;
+
+            if (targetDistance < maxDistance)
+            {
+                maxDistance = targetDistance;
+                closestInteractable = interactable;
+                closestInteractable.isPlayerNear = true; 
+            }
+        }
+        
+    }
+
+    private void Update()
+    {
+        if (availableInteractables != null)
+        {
+            FindClosestInteractable();
+
+        }
+
+        if (inputs.inputE && closestInteractable != null)
+        {
+            //closestInteractable.  QUI METTO L'INTERAZIONE CHE DEVE FARE
+        }
+      
+    }
 }

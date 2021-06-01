@@ -1,18 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prototype/Sula/Prefab e modelli/Generatore_geo.fbx.meta
-guid: 8fb1c7707e392294dbfae0eeef6e7119
-=======
-guid: 4d7cd45332bb2e4479ca52d112c68338
->>>>>>> origin/Chiachi:Assets/Prototype/Chiachi/capsule_piante_batteria_geo.fbx.meta
+guid: c9742e4d3a4a7754ca2f71ff7094e681
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: generatore_MAT
-    second: {fileID: 2100000, guid: 5eca7193ceb6c674eb0a94c2fc65e98c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

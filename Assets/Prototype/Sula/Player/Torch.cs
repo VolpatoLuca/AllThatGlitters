@@ -8,6 +8,7 @@ public class Torch : MonoBehaviour
     PlayerStats stats;
     PlayerInputs inputs;
     FieldOfView fieldOfView;
+    AudioManager audioM;
 
     //FieldOfView
     [Header("Settings")]
@@ -24,7 +25,6 @@ public class Torch : MonoBehaviour
 
     //Torch behaviour
     [Header("Torch behaviour")]
-    [Header("Shield Settings")]
 
     bool isActive;
     [SerializeField] int lightActivationPrice = 1;
@@ -39,6 +39,7 @@ public class Torch : MonoBehaviour
         stats = GetComponent<PlayerStats>();
         inputs = GetComponent<PlayerInputs>();
         fieldOfView = GetComponent<FieldOfView>();
+        audioM = FindObjectOfType<AudioManager>(); //uSO IL FINd <_<
         //assegno i valori attuali
         PopulateBaseValues();
     }
@@ -65,6 +66,8 @@ public class Torch : MonoBehaviour
             if (!enoughEnergy)
             {
                 Debug.Log("Not enough energy");
+                //AUDIO
+                audioM.PlaySound("TorchActivationFailed");
                 return;
             }
             if (!isActive && enoughEnergy)
@@ -85,7 +88,8 @@ public class Torch : MonoBehaviour
         torch.intensity = intensityStrong;
         isActive = true;
         StartCoroutine("BatteryUsage"); //faccio partire il timer che consuma l'energia
-        //play sound
+        //AUDIO
+        audioM.PlaySound("TorchActivation");
     }
 
     private void StandardLight()
@@ -95,7 +99,8 @@ public class Torch : MonoBehaviour
         torch.intensity = intensityBase;
         isActive = false;
         StopCoroutine("BatteryUsage");
-        //play sound
+        //AUDIO
+        audioM.PlaySound("TorchActivation");
     }
 
     IEnumerator BatteryUsage()

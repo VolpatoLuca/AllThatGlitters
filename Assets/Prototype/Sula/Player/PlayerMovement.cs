@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     CharacterController controller;
     [SerializeField]
     PlayerInputs inputs;
+    [SerializeField]
+    Animator animator;
 
     //settings 
     [SerializeField]
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inputs = GetComponent<PlayerInputs>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -48,14 +51,21 @@ public class PlayerMovement : MonoBehaviour
     {
         
         Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.1f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
+        Vector3 walkDirection = new Vector3(inputs.rawInputHorizontal, 0, inputs.rawInputVertical).normalized; //senza gravità per vedere se cammina
 
         if (direction.magnitude >= 0.1f)
         {
-            //RotateTowardsMovement(direction);
-            
             controller.Move(direction * speed * Time.deltaTime);
-
-        }
+            //ANIMATION Walk
+            if (walkDirection.magnitude >= 0.1f)
+            {
+                animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
+            }
+        }       
     }
 
     private void RotateTowardsMovement(Vector3 direction)

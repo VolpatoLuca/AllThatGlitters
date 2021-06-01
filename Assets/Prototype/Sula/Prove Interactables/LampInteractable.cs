@@ -19,7 +19,7 @@ public class LampInteractable : Interactable
         
     }
 
-    private void Update()
+    void Update()
     {
         playerVicino = IsPlayerNear;
     }

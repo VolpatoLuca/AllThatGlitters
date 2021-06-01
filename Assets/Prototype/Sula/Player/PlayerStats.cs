@@ -43,9 +43,10 @@ public class PlayerStats : MonoBehaviour
         {
             currentEnergy = 0;
             Debug.Log("Muerto");
+            //ANIMATION morte
         }
         //UI
-        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+        //UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
     }
 
     public void RefillEnergy(int energyRefill)

@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strongRadius: 9
-  torch: {fileID: 0}
+  torch: {fileID: 7686959403921702592}
   strongRange: 9.5
   intensityStrong: 6
   lightActivationPrice: 1
@@ -669,5 +669,10 @@ PrefabInstance:
 --- !u!4 &5957456813626000435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1840569087871075537, guid: 21ce32c111a9a994da94b1b3f2ce8303, type: 3}
+  m_PrefabInstance: {fileID: 5415051598616740066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &7686959403921702592 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2417219572289486370, guid: 21ce32c111a9a994da94b1b3f2ce8303, type: 3}
   m_PrefabInstance: {fileID: 5415051598616740066}
   m_PrefabAsset: {fileID: 0}

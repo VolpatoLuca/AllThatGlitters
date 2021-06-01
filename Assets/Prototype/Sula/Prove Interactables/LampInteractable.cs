@@ -7,14 +7,32 @@ public class LampInteractable : Interactable
 {
     SphereCollider trigger;
     public bool playerVicino;
+
+    Light light;
+
     void Start()
     {
         trigger = GetComponent<SphereCollider>();
-        trigger.isTrigger = true;       
+        trigger.isTrigger = true;
+        //light
+        light = GetComponentInChildren<Light>();
+        
     }
 
     private void Update()
     {
-        playerVicino = isPlayerNear;
+        playerVicino = IsPlayerNear;
+    }
+
+    public override void Interact()
+    {
+        if (!light.enabled)
+        {
+            light.enabled = true;
+        }
+        else
+        {
+            light.enabled = false;
+        }
     }
 }

@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
         currentEnergy = maxEnergy;
         isFull = true;
         //UI
-        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+        //UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
 
     }
 

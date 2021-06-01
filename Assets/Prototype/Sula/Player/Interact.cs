@@ -27,7 +27,7 @@ public class Interact : MonoBehaviour
         if (other.TryGetComponent<Interactable>(out Interactable otherInteractable))
         {
             availableInteractables.Remove(otherInteractable);
-            otherInteractable.isPlayerNear = false;
+            otherInteractable.IsPlayerNear = false;
         }
     }
 
@@ -39,13 +39,13 @@ public class Interact : MonoBehaviour
         foreach (var interactable in availableInteractables)
         {
             float targetDistance = Vector3.Distance(transform.position, interactable.transform.position);
-            interactable.isPlayerNear = false;
+            interactable.IsPlayerNear = false;
 
             if (targetDistance < maxDistance)
             {
                 maxDistance = targetDistance;
                 closestInteractable = interactable;
-                closestInteractable.isPlayerNear = true; 
+                closestInteractable.IsPlayerNear = true; 
             }
         }
         
@@ -61,7 +61,7 @@ public class Interact : MonoBehaviour
 
         if (inputs.inputE && closestInteractable != null)
         {
-            //closestInteractable.  QUI METTO L'INTERAZIONE CHE DEVE FARE
+            closestInteractable.Interact();
         }
       
     }

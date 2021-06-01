@@ -11,6 +11,7 @@ public class Torch : MonoBehaviour
 
     //FieldOfView
     [Header("Settings")]
+
     float baseRadius;
     [SerializeField] float strongRadius = 9f;
     
@@ -23,6 +24,8 @@ public class Torch : MonoBehaviour
 
     //Torch behaviour
     [Header("Torch behaviour")]
+    [Header("Shield Settings")]
+
     bool isActive;
     [SerializeField] int lightActivationPrice = 1;
     [SerializeField] int lightUsagePrice = 1;
@@ -91,6 +94,7 @@ public class Torch : MonoBehaviour
         torch.range = baseRange;
         torch.intensity = intensityBase;
         isActive = false;
+        StopCoroutine("BatteryUsage");
         //play sound
     }
 

@@ -757,7 +757,7 @@ MonoBehaviour:
     playOnAwake: 1
     loop: 1
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: TorchActivation
     clip: {fileID: 8300000, guid: 63053288c7f1e104ea11c9ee7f00de7f, type: 3}
@@ -765,7 +765,7 @@ MonoBehaviour:
     playOnAwake: 0
     loop: 0
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: TorchActivationFailed
     clip: {fileID: 8300000, guid: 12fa3e116dee53c448f53c35b09f0cb0, type: 3}
@@ -773,7 +773,7 @@ MonoBehaviour:
     playOnAwake: 0
     loop: 0
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &444362873
 Transform:

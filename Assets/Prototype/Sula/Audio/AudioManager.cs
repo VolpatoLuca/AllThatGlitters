@@ -22,7 +22,12 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);//serve a non distruggerlo in caso di cambio scena
-        
+
+        AssignSounds();
+    }
+
+    private void AssignSounds()
+    {
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -40,6 +45,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlaySound("GameTheme");
+               
     }
 
     public void PlaySound(string name)
@@ -50,9 +56,12 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Sound " + name + " not found!");
             return;
         }
+        Debug.Log(s.name);
+
         s.source.Play();
         s.source.PlayOneShot(s.clip);
-        //Debug.Log();
+        Debug.Log("Playing " + name);
     }
+
 
 }

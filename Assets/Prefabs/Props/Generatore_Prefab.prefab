@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4477172016919045910}
   - component: {fileID: 8609350880424440001}
   m_Layer: 8
-  m_Name: Generatore_geo
+  m_Name: Generatore_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6099165459801435060, guid: 8fb1c7707e392294dbfae0eeef6e7119, type: 3}
+  - {fileID: 2100000, guid: 5eca7193ceb6c674eb0a94c2fc65e98c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -91,7 +91,8 @@ public class GameManager : MonoBehaviour
         {
             playerTimer += Time.deltaTime;
             UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
-            floorMat.SetVector("_Pos", Player.transform.position);
+            if (Player)
+                floorMat.SetVector("_Pos", Player.transform.position);
         }
     }
 
@@ -116,6 +117,8 @@ public class GameManager : MonoBehaviour
                 endRoom = room.Key;
             }
         }
+        if (Player)
+            Destroy(Player);
         Player = Instantiate(playerPrefab, Vector3.up, Quaternion.identity);
         endRoom.IsEndRoom = true;
         if (enemyGenerators.Count > 0)

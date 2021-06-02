@@ -5,7 +5,7 @@ using UnityEngine;
 public class PropGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject[] props;
-    public bool canSpawn = false;
+    [HideInInspector] public bool canSpawn = false;
     private float waitTime = 0.1f;
     private GameObject spawn;
 

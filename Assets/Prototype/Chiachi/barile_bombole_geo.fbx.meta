@@ -3,7 +3,12 @@ guid: e5bc4960cabb688428e8593c5334a99d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barile_MAT
+    second: {fileID: 2100000, guid: c41f9ee99afca9b40abbeb965e249860, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

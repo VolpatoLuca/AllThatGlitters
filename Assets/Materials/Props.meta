@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 7bf84502fbac18e44b372865695cf6ba
+<<<<<<< HEAD:Assets/Prototype/Sula/Audio.meta
+guid: 1bf0227021fd42e469b9ef1d6846bea3
+=======
+guid: b96dcd8319185d143ae31bfba21ad783
+>>>>>>> Chiachi:Assets/Materials/Props.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

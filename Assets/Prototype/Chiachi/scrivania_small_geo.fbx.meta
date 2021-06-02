@@ -3,7 +3,12 @@ guid: deca57499cef78643a74923a1e22067d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scrivania_small_MAT
+    second: {fileID: 2100000, guid: f08aab2913eac2c4094893de54e731f2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

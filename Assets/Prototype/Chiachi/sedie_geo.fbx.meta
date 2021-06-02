@@ -3,7 +3,12 @@ guid: 74c89b9884b8fdd4dbf215429fb13ca9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sedia_MAT
+    second: {fileID: 2100000, guid: e13a8287a694d3d47be35d384c000d86, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

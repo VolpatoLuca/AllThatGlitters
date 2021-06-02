@@ -3,7 +3,12 @@ guid: 97c32f78d2a8de4438f58f9fd903c7bd
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: schermo_MAT
+    second: {fileID: 2100000, guid: 4dbad1df65b77e448866c41a7de16d94, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

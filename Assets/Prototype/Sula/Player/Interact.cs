@@ -18,14 +18,16 @@ public class Interact : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Interactable>(out Interactable otherInteractable))
-        {            
-            availableInteractables.Add(otherInteractable);            
+        {
+            availableInteractables.Add(otherInteractable);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.TryGetComponent<Interactable>(out Interactable otherInteractable))
         {
+            if (closestInteractable == otherInteractable)
+                closestInteractable = null;
             availableInteractables.Remove(otherInteractable);
             otherInteractable.IsPlayerNear = false;
         }
@@ -45,15 +47,15 @@ public class Interact : MonoBehaviour
             {
                 maxDistance = targetDistance;
                 closestInteractable = interactable;
-                closestInteractable.IsPlayerNear = true; 
             }
         }
-        
+        closestInteractable.IsPlayerNear = true;
+
     }
 
     private void Update()
     {
-        if (availableInteractables != null)
+        if (availableInteractables.Count > 0)
         {
             FindClosestInteractable();
 
@@ -63,6 +65,6 @@ public class Interact : MonoBehaviour
         {
             closestInteractable.Interact();
         }
-      
+
     }
 }

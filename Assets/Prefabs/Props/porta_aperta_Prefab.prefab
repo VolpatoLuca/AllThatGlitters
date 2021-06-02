@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6847290469087592027}
   - component: {fileID: 9020248952895695608}
   - component: {fileID: 2089219282779529056}
+  - component: {fileID: 7620524347102231217}
   m_Layer: 8
-  m_Name: porta_chiusa_Prefab
+  m_Name: porta_aperta_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2.999945, z: 0.54954696}
-  m_Center: {x: 0.00000029802322, y: 1.4999725, z: -0.000000044703484}
+  m_Size: {x: 0.37341285, y: 2.999945, z: 0.54954696}
+  m_Center: {x: -1.3132933, y: 1.4999725, z: -0.000000059604645}
 --- !u!114 &2089219282779529056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +110,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderers: []
+--- !u!65 &7620524347102231217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375563981936855875}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39089966, y: 2.999945, z: 0.54954696}
+  m_Center: {x: 1.3045504, y: 1.4999725, z: -0.000000059604645}

@@ -3,7 +3,12 @@ guid: 2bac1f52a487f6e418d04d80025f487e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: braccio_meccanico_MAT
+    second: {fileID: 2100000, guid: 3dab7d84bf5837a478bec8a8814a1a98, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

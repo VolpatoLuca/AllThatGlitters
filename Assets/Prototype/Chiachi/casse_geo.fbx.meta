@@ -3,7 +3,12 @@ guid: 51d7a0fe1e9c6f74882897ebad250e04
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cassa_MAT
+    second: {fileID: 2100000, guid: 52965b0575be6104898c2161bc875f02, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

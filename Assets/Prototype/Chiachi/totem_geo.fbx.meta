@@ -3,7 +3,17 @@ guid: 8b150d0eb8d1c1547839068991be9e30
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: totem_MAT
+    second: {fileID: 2100000, guid: 7819b0d7a486bbf4d8120b7911996914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: totem_vetro_MAT
+    second: {fileID: 2100000, guid: 183eb913dfcdcae4ea4923a0d2c5d117, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

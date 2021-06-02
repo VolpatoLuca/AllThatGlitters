@@ -1,6 +1,14 @@
 Ogni room deve essere 10x10 con porte larghe 3 al centro
+
 Possono esserci corridoi, 10x20, con porte solo nei lati corti
-Per avere assets dentro la stanza, mettere "PropGenerator" al livello del pavimento nella posizione preferita, poi draggare una lista di prefab che lui sceglierà random
-IMPORTANTE: avere 1 EndLevelInteractable per ogni prefab di stanza, in una posizione raggiungibile, in caso quella diventi la stanza finale
-IMPORTANTE: avere 1 Gameobject vuoto per ogni porta con lo script "CheckPoint" e settare la direzione giusta (z globale -> north, x -> east, -z -> south, -x -> west),
-	deve essere messo a distanza 10 dal centro della stanza (verso la porta) e figlio diretto del GameObject con lo script "Room"
+
+Per avere assets dentro la stanza;
+- mettere "PropGenerator" al livello del pavimento nella posizione preferita (z punta in avanti)
+- draggare una lista di prefab che lui sceglierà random (se si vuole la possibilità che non spawni nulla mettere anche PropEmpty_Prefab)
+- avere 1 EndLevelInteractable_Prefab per ogni prefab di stanza, in una posizione raggiungibile, in caso quella diventi la stanza finale
+- avere 1 CheckPoint_Prefab --> uno per porta; 
+	deve essere messo a distanza 10 dal centro della stanza (deve puntare via dalla stanza)
+	e figlio diretto del GameObject vuoto con lo script "Room" che contiene tutti gli elementi della stanza.
+- settare la direzione giusta di CheckPoint_Prefab (z globale -> north, x -> east, -z -> south, -x -> west)
+- mettere MAX una luce per stanza
+	

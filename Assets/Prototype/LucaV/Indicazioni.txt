@@ -12,3 +12,5 @@ Per avere assets dentro la stanza;
 - settare la direzione giusta di CheckPoint_Prefab (z globale -> north, x -> east, -z -> south, -x -> west)
 - mettere MAX una luce per stanza
 	
+
+	-

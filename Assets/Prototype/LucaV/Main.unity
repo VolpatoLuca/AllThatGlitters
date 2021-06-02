@@ -6518,20 +6518,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b986c770408632244889a052917279f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoom: {fileID: 7863806040549026986, guid: d68863df7f72e8344882214d3f3dc6ba, type: 3}
+  startRoom: {fileID: 6095304387235638281, guid: ec372a742288df94ea642f997b788e59, type: 3}
   rooms:
-  - {fileID: -6535441679731014153, guid: c309afd6e5fd0a4499614547a0838026, type: 3}
-  - {fileID: 756819846, guid: f06154d4b93b94144b6be19e802c9ff2, type: 3}
-  - {fileID: 4948792756912731736, guid: 85e68a4fee6df5e4aa2766a0a7237c53, type: 3}
-  - {fileID: 4686973279858881169, guid: bac2320c19fdd134ca6cab0db67b30c4, type: 3}
+  - {fileID: 7471163022482280125, guid: de98df13834343a43a61c38cfa6e7240, type: 3}
+  - {fileID: 8370951388715549509, guid: 5fda48247362cd743908c535fbec4fb1, type: 3}
+  - {fileID: 3426153119531742076, guid: d6fc99e1571b8a94d9ffd97bd070a214, type: 3}
+  - {fileID: 3195166048807238331, guid: 49841e4f21c1b9147b33766205e7710c, type: 3}
+  - {fileID: 2858926596053303664, guid: 81c188279ee3c3449adda8921caf0bb1, type: 3}
+  - {fileID: 6328121272549651880, guid: 488b8679f8fa3234f8490df8352e9659, type: 3}
+  - {fileID: 8017625070755884955, guid: 6c0794a4c09fdcf4f931a3c68b638482, type: 3}
+  - {fileID: 3120985568565087425, guid: b5d139b7b8317e04d8bc67a99955fe61, type: 3}
   endRooms:
-  - {fileID: 8912157726790059086, guid: 17e9db1a96aedf945aa58231d973d632, type: 3}
-  - {fileID: 3658847926477129958, guid: 6e9ccd65abf1dbb489aeb9558a55dc92, type: 3}
-  - {fileID: 6048782955336210816, guid: 42de6cc3330451e408c93f20a5a53fe2, type: 3}
-  - {fileID: 7677952468012034299, guid: 78da2e30a60a3e244a605ded7898c3f0, type: 3}
+  - {fileID: 5907822079521676193, guid: 120c7158ff3b77848aa2532337cb2fcd, type: 3}
+  - {fileID: 3504079268095413716, guid: 7fd0c66f5fa0d174d8729c5724dc14ef, type: 3}
+  - {fileID: 65460538308826881, guid: f264d13900b5eb545a540f1a2ac159f3, type: 3}
+  - {fileID: 7522416919064477748, guid: dffdd4ad0c21d2044b453c9590bcf5f0, type: 3}
   hallwayRooms:
-  - {fileID: 5562820326516451892, guid: 914e261a91a0dc346a8b2b6764fe1825, type: 3}
-  - {fileID: 3163552785974967237, guid: b71ea674a3b311e42913812dda22655c, type: 3}
+  - {fileID: 4849156775904635350, guid: a7a024ab2aeee44488e5ee2ea5385f08, type: 3}
+  - {fileID: 8836875957558656493, guid: 517c5724be99fd54fb077e441d686d82, type: 3}
   cursorTexture: {fileID: 2800000, guid: 7f64a11687c6d1a4ca0b4d338be0e2f7, type: 3}
   floorMat: {fileID: 2100000, guid: 1b015077e364ec143aeeed689180805c, type: 2}
   playerPrefab: {fileID: 3787481561654535089, guid: 53dd40cd73747064ca87496dfb8504f7, type: 3}

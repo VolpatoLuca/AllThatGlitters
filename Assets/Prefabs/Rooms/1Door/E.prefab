@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8199618662853934060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Muri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5376584667412230141}
   - component: {fileID: 3702186029288758500}
   - component: {fileID: 871476147681365995}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InteractCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +118,19 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!65 &8552206584534424302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221279855825877011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000004, y: 3, z: 11}
+  m_Center: {x: -0.2500002, y: 1.5, z: 5.5}
 --- !u!1 &4281767978424220718
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637769566748407647}
   - component: {fileID: 1593491505194267561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckPoint_Prefab_E
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -162,6 +175,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+--- !u!65 &2358747583885662545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394599521241793129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000003, y: 3, z: 10.999997}
+  m_Center: {x: -0.25000015, y: 1.5, z: 5.4999986}
+--- !u!65 &4574719592724737389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026994000523528378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.994365, y: 3, z: 0.5000001}
+  m_Center: {x: -1.9971825, y: 1.5, z: 0.25000006}
+--- !u!65 &8717143841322487252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809271478697636642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000004, y: 3, z: 11}
+  m_Center: {x: -0.2500007, y: 1.5, z: 5.4999995}
 --- !u!1 &5907822079471957061
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,8 +225,8 @@ GameObject:
   - component: {fileID: 5907822079471957058}
   - component: {fileID: 5907822079471957057}
   - component: {fileID: 5907822079471957056}
-  - component: {fileID: 5907822079471957059}
-  m_Layer: 0
+  - component: {fileID: 1530596014237956906}
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,8 +296,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5907822079471957059
-MeshCollider:
+--- !u!65 &1530596014237956906
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -254,10 +306,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5907822079506306787
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +321,7 @@ GameObject:
   - component: {fileID: 5907822079506306790}
   - component: {fileID: 5907822079506306785}
   - component: {fileID: 5907822079506306784}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EndLevelInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5907822079521676206}
   - component: {fileID: 5907822079521676193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,6 +557,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directions:
   - {fileID: 1593491505194267561}
+--- !u!65 &5356112614614171366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645967645736191444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9943645, y: 3, z: 0.5000001}
+  m_Center: {x: 1.9971823, y: 1.5, z: 0.25000006}
 --- !u!1 &6688561829385041451
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +581,7 @@ GameObject:
   - component: {fileID: 1949436401862422955}
   - component: {fileID: 8127335237523387432}
   - component: {fileID: 8288136482637522295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +656,7 @@ GameObject:
   - component: {fileID: 7522484980131212290}
   - component: {fileID: 222456592787215930}
   - component: {fileID: 5141694980043922464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EndLevelInteractable_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,6 +716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro_Porta_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -698,6 +766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+--- !u!1 &6645967645736191444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+  m_PrefabInstance: {fileID: 1806397050674184565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6831080799849653891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
@@ -758,8 +831,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro_Stanza (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+--- !u!1 &4221279855825877011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+  m_PrefabInstance: {fileID: 1958581948112014395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1845683714304201396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194614007182057103, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
@@ -820,8 +902,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro_Stanza (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+--- !u!1 &4394599521241793129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+  m_PrefabInstance: {fileID: 2109506195882440257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2302765329860274382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194614007182057103, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
@@ -882,6 +973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: porta_aperta_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1375563981936855875, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
 --- !u!4 &2546198393550785006 stripped
@@ -899,6 +994,10 @@ PrefabInstance:
     - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_Name
       value: Muro_Porta_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_RootOrder
@@ -946,6 +1045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+--- !u!1 &5026994000523528378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+  m_PrefabInstance: {fileID: 5901237098645975233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2984383158750820932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
@@ -1008,6 +1112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+--- !u!1 &5809271478697636642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+  m_PrefabInstance: {fileID: 8152665345096828682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8329264055781202309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194614007182057103, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}

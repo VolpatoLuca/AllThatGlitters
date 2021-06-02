@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936830600910091577}
   - component: {fileID: 1059984099183579799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckPoint_Prefab_W
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 1788105701291052800}
   - component: {fileID: 2932302965115971601}
   - component: {fileID: 6685537990108134454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3071653559932146927}
   - component: {fileID: 5288774877562795137}
   - component: {fileID: 5587069151572234808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EndLevelInteractable_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4612767265200326430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Muri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,6 +217,32 @@ Transform:
   m_Father: {fileID: 18397526713764255}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4869743809575122668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192358023141305735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000004, y: 3, z: 11}
+  m_Center: {x: -0.2500002, y: 1.5, z: 5.5000005}
+--- !u!65 &7138190614583720688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070294895598347081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5000003, y: 3, z: 10.999997}
+  m_Center: {x: -0.25000015, y: 1.5, z: 5.4999986}
 --- !u!1 &3684871647216428343
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +254,8 @@ GameObject:
   - component: {fileID: 8605552594579071689}
   - component: {fileID: 4467687024962544775}
   - component: {fileID: 3851324605201227487}
-  - component: {fileID: 202034729931632326}
-  m_Layer: 0
+  - component: {fileID: 1074047748374121386}
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,8 +325,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &202034729931632326
-MeshCollider:
+--- !u!65 &1074047748374121386
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -309,10 +335,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5567050155463771207
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296460023672818176}
   - component: {fileID: 1479950746932176950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckPoint_Prefab_S
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -357,6 +382,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+--- !u!65 &7402189597611235446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857967653499736979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9943645, y: 3, z: 0.5000001}
+  m_Center: {x: 1.9971823, y: 1.5, z: 0.25000006}
 --- !u!1 &6234306463670387999
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +407,7 @@ GameObject:
   - component: {fileID: 6918539076132434304}
   - component: {fileID: 7178072691635197272}
   - component: {fileID: 5412792637677332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EndLevelInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,6 +594,19 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1926418945819092942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762037956546355681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9943635, y: 3, z: 0.5}
+  m_Center: {x: 1.9971818, y: 1.5, z: 0.25}
 --- !u!1 &7185043017440392386
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18397526713764255}
   - component: {fileID: 3195166048807238331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +669,7 @@ GameObject:
   - component: {fileID: 6771338163104105850}
   - component: {fileID: 1148200450262526621}
   - component: {fileID: 8698244705743778560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InteractCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,6 +740,32 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!65 &1203927535544494043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421101804700869147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.994365, y: 3, z: 0.5000001}
+  m_Center: {x: -1.9971825, y: 1.5, z: 0.25000006}
+--- !u!65 &1628595235891917365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796536863466161727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.994364, y: 3, z: 0.5}
+  m_Center: {x: -1.997182, y: 1.5, z: 0.25}
 --- !u!1001 &802019786000389985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,8 +821,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro_Stanza
       objectReference: {fileID: 0}
+    - target: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+--- !u!1 &3070294895598347081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+  m_PrefabInstance: {fileID: 802019786000389985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &689667390518430190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194614007182057103, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
@@ -761,6 +847,10 @@ PrefabInstance:
     - target: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
       propertyPath: m_Name
       value: Muro_Porta_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
       propertyPath: m_RootOrder
@@ -813,6 +903,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
   m_PrefabInstance: {fileID: 1468466343433164594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5857967653499736979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+  m_PrefabInstance: {fileID: 1468466343433164594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1800649720809432384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +918,10 @@ PrefabInstance:
     - target: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
       propertyPath: m_Name
       value: Muro_Porta_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
       propertyPath: m_RootOrder
@@ -870,6 +969,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+--- !u!1 &6762037956546355681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983977153724400801, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
+  m_PrefabInstance: {fileID: 1800649720809432384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6854604140500779702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5178369120843343862, guid: 35dbf2f3fd889a24d8b6d0b16dc2d2fc, type: 3}
@@ -929,6 +1033,10 @@ PrefabInstance:
     - target: {fileID: 1375563981936855875, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
       propertyPath: m_Name
       value: porta_aperta_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375563981936855875, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
@@ -992,8 +1100,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro_Stanza (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+--- !u!1 &2192358023141305735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430457595152495656, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
+  m_PrefabInstance: {fileID: 4599980960789191087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4423944577283557152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194614007182057103, guid: 9e2101fdd15001949bd168289afeff3a, type: 3}
@@ -1009,6 +1126,10 @@ PrefabInstance:
     - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_Name
       value: Muro_Porta_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_RootOrder
@@ -1056,6 +1177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+--- !u!1 &8421101804700869147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+  m_PrefabInstance: {fileID: 6988422177519786592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1762055045884481765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
@@ -1116,6 +1242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: porta_aperta_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1375563981936855875, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
 --- !u!4 &7995060448536683912 stripped
@@ -1133,6 +1263,10 @@ PrefabInstance:
     - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_Name
       value: Muro_Porta_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
       propertyPath: m_RootOrder
@@ -1183,5 +1317,10 @@ PrefabInstance:
 --- !u!4 &1637695531993937089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8687390130658757253, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
+  m_PrefabInstance: {fileID: 7941407600318905924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8796536863466161727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1451882602089674875, guid: cdcb21711fe0e76488546205b6552cc2, type: 3}
   m_PrefabInstance: {fileID: 7941407600318905924}
   m_PrefabAsset: {fileID: 0}

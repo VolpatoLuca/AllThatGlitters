@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4718768984846811037}
   - component: {fileID: 5253455722298010940}
   - component: {fileID: 5723111167661914496}
+  - component: {fileID: 5956402941400394927}
   m_Layer: 8
   m_Name: porta_aperta_Prefab
   m_TagString: Untagged
@@ -93,5 +94,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0000005, y: 2.9999454, z: 0.54954696}
-  m_Center: {x: 0.00000029802322, y: 1.4999727, z: -0.000000074505806}
+  m_Size: {x: 0.36630845, y: 2.9999454, z: 0.54954696}
+  m_Center: {x: -1.3168458, y: 1.4999727, z: -0.000000059604645}
+--- !u!65 &5956402941400394927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142185602059804331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34888053, y: 2.999945, z: 0.54954696}
+  m_Center: {x: 1.32556, y: 1.4999725, z: -0.000000059604645}

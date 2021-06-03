@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2778587954667109985, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
       propertyPath: props.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2778587954667109985, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
       propertyPath: props.Array.data[0]
@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: props.Array.data[2]
       value: 
       objectReference: {fileID: 8753025862884619053, guid: 08e51ec5c1721af4a8805fdceb087726, type: 3}
+    - target: {fileID: 2778587954667109985, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
+      propertyPath: props.Array.data[3]
+      value: 
+      objectReference: {fileID: 4293327128249719731, guid: 89d0d65fda3efd041b2b2999e68c5484, type: 3}
     - target: {fileID: 4156768576282780499, guid: f999c33766cc07741adc44a6895cb5cd, type: 3}
       propertyPath: m_RootOrder
       value: 0

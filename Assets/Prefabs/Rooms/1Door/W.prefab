@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: porta_aperta_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6352946850154500704, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -800030713576842192, guid: 9fb9ae14ed5882143bd2562aa3e2005d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99be07c3092afbb4b853c685bf42de9e, type: 3}
 --- !u!4 &2037463260597859559 stripped

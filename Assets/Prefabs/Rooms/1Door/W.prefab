@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1469006279775247058}
+  vfx: {fileID: 7522416919078342006}
 --- !u!135 &9134086074523322293
 SphereCollider:
   m_ObjectHideFlags: 0

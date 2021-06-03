@@ -15,6 +15,7 @@ public class Torch : MonoBehaviour
 
     float baseRadius;
     [SerializeField] float strongRadius = 9f;
+    [SerializeField] Material fovMaterial;
     
     //Torch
     [SerializeField] Light torch; //per ora va draggata
@@ -86,6 +87,7 @@ public class Torch : MonoBehaviour
         fieldOfView.viewRadius = strongRadius;
         torch.range = strongRange;
         torch.intensity = intensityStrong;
+        fovMaterial.SetFloat("_MaxDistance", strongRange);
         isActive = true;
         StartCoroutine("BatteryUsage"); //faccio partire il timer che consuma l'energia
         //AUDIO
@@ -97,6 +99,7 @@ public class Torch : MonoBehaviour
         fieldOfView.viewRadius = baseRadius;
         torch.range = baseRange;
         torch.intensity = intensityBase;
+        fovMaterial.SetFloat("_MaxDistance", baseRange);
         isActive = false;
         StopCoroutine("BatteryUsage");
         //AUDIO

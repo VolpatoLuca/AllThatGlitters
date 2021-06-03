@@ -151,6 +151,7 @@ public class GameManager : MonoBehaviour
     public void OnLevelFinish(bool hasPlayerWon)
     {
         gameState = GameState.gameOver;
+        Destroy(Player);
         UIManager.singleton.ShowEndGameCanvas(hasPlayerWon);
     }
 

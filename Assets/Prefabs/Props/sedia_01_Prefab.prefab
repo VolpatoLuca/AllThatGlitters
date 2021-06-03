@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8840376126366123017}
   - component: {fileID: 6479609626525306025}
   m_Layer: 8
-  m_Name: sedia_01
+  m_Name: sedia_01_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

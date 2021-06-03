@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5178369120843343862}
   - component: {fileID: 3269346734831515051}
   - component: {fileID: 5117794567579070544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Muro_Porta_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

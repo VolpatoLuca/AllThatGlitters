@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4143701048895394778}
   - component: {fileID: 1021958344260050047}
   - component: {fileID: 3011306140774246581}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Muro_Corridoio
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1980152313374014250}
   - component: {fileID: 217455621845313156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2041597478325739983}
   - component: {fileID: 5292361378701058606}
   - component: {fileID: 3000230521306098727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 8843708527379854042}
   - component: {fileID: 2606574071903199291}
   - component: {fileID: 7984430170703459978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp_Vetro_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3860759669926958171}
   - component: {fileID: 723139094703823883}
   - component: {fileID: 1078582299944435607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lampadina_01_tavolo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,6 +354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9218779420858240859}
     m_Modifications:
+    - target: {fileID: 61111125902753995, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1627735644657916189, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -453,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 8210432024688228263, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
       propertyPath: m_Name
       value: InteractCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210432024688228263, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}

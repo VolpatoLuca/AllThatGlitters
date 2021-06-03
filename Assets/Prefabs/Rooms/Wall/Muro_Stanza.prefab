@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 194614007182057103}
   - component: {fileID: 7613522102707047781}
   - component: {fileID: 8278826125370059358}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Muro_Stanza
   m_TagString: Untagged
   m_Icon: {fileID: 0}

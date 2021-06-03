@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2057222597260080539}
   - component: {fileID: 7441393652521232988}
   - component: {fileID: 7694467296694218844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: scrivania_04_big_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

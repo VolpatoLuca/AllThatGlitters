@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2495072826711315453}
   - component: {fileID: 5203440316710654446}
   m_Layer: 8
-  m_Name: Bombola_Maniglia_Prefab
+  m_Name: Bombola_Base_02_Maniglia_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

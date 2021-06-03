@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8458049725255239131}
   - component: {fileID: 7550951099137484514}
   m_Layer: 8
-  m_Name: Barile_Base_Prefab
+  m_Name: Bombola_Base_02_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

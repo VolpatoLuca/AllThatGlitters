@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8837520334066123149}
   - component: {fileID: 79006037554892628}
   - component: {fileID: 6972231371614550979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turbina_Fluttuante
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -762,10 +762,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot_GEO_DEFINITIVO
       objectReference: {fileID: 0}
-    - target: {fileID: 8175394432424645966, guid: 46e6528279965de4183bc3e19ce674cf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.224
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46e6528279965de4183bc3e19ce674cf, type: 3}
 --- !u!4 &7845902061571521000 stripped

@@ -13,5 +13,6 @@ public class UpdatePosition : MonoBehaviour
     private void Update()
     {
         mr.sharedMaterial.SetVector("_Pos", new Vector4(transform.position.x, 0, transform.position.z, 0));
+        mr.enabled = GameManager.singleton.gameState == GameState.playing;
     }
 }

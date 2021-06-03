@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int friendlyRobotsNumber;
     public int MaxFriendlyRobots { get; set; }
 
+    private GameObject mainCam;
     private float generateWaitTime = 1f;
     private bool hasGeneratedRooms = false;
     private bool hasGeneratedLevel = false;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        mainCam = Camera.main.gameObject;
     }
 
 
@@ -125,7 +126,7 @@ public class GameManager : MonoBehaviour
             SelectSpawners(enemyGenerators, MaxEnemyRobots, out enemyRobotsNumber);
         if (friendsGenerators.Count > 0)
             SelectSpawners(friendsGenerators, MaxFriendlyRobots, out friendlyRobotsNumber);
-        Camera.main.gameObject.SetActive(false);
+        mainCam.SetActive(false);
         RoomsGenerated?.Invoke();
     }
 
@@ -176,6 +177,7 @@ public class GameManager : MonoBehaviour
         CurrentRescuedRobots = 0;
         hasGeneratedLevel = false;
         playerTimer = 0;
+        mainCam.SetActive(true);
     }
 
     public void EndLevelInteracted()

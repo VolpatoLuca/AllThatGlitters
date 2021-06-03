@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 642539421945557148}
   - component: {fileID: 6352946850154500704}
   - component: {fileID: 6847290469087592027}
-  - component: {fileID: 9020248952895695608}
-  - component: {fileID: 2089219282779529056}
-  - component: {fileID: 7620524347102231217}
+  - component: {fileID: 6154332469450976345}
   m_Layer: 8
   m_Name: porta_chiusa_Prefab
   m_TagString: Untagged
@@ -84,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9020248952895695608
+--- !u!65 &6154332469450976345
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,31 +93,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.37341285, y: 2.999945, z: 0.54954696}
-  m_Center: {x: -1.3132933, y: 1.4999725, z: -0.000000059604645}
---- !u!114 &2089219282779529056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375563981936855875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8e8a821d772344898c8c69ad74e509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderers: []
---- !u!65 &7620524347102231217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375563981936855875}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.39089966, y: 2.999945, z: 0.54954696}
-  m_Center: {x: 1.3045504, y: 1.4999725, z: -0.000000059604645}
+  m_Size: {x: 3.0000005, y: 2.9999454, z: 0.54954696}
+  m_Center: {x: 0.00000029802322, y: 1.4999727, z: -0.000000074505806}

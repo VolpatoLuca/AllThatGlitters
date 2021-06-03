@@ -15,4 +15,4 @@ MonoBehaviour:
   difficultyName: Nightmare
   roomAmount: 10
   friendlyRobotsAmount: 0
-  enemyRobotsAmount: 1
+  enemyRobotsAmount: 0

@@ -67,4 +67,9 @@ public class Interact : MonoBehaviour
         }
 
     }
+
+     public void Remove(Interactable otherInteractable)
+    {
+        availableInteractables.Remove(otherInteractable);
+    }
 }

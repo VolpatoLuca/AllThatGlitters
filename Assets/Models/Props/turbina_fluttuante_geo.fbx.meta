@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Bot_Screen_MAT
     second: {fileID: 2100000, guid: 75bbd283462f5e3488505ef0ecced108, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: turbina_fluttuante_MAT
+    second: {fileID: 2100000, guid: b030c9f647205d3468ea9d25bc61439f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

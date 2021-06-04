@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2724667354947712262}
   - component: {fileID: 7238037261531820873}
   m_Layer: 0
-  m_Name: tubo_valvola_curva
+  m_Name: tubo_valvola_curva_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1903673332261409442, guid: f6c230c52d1285d45a36149680a53d2a, type: 3}
+  - {fileID: 2100000, guid: 5c0f41de23ec3194b9f827a87705f29c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

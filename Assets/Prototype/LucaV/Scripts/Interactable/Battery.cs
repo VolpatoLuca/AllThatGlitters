@@ -10,7 +10,11 @@ public class Battery : Interactable
 
     public override void Interact()
     {
-        GameManager.singleton.Player.GetComponent<PlayerStats>().RefillEnergy(1);
+        GameManager.singleton.Player.GetComponent<PlayerStats>().RefillEnergy(recharge);
+        GameManager.singleton.Player.GetComponent<Interact>().Remove(gameObject.GetComponent<Interactable>());
+        Destroy(gameObject);
+        
+
     }
 
 }

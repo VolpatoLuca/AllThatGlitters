@@ -3,7 +3,12 @@ guid: 690662675e0ba6f45bc8bd3230223af2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muro_Corridoio_MAT
+    second: {fileID: 2100000, guid: d56c58dd6ca7a0543916650e923644e3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

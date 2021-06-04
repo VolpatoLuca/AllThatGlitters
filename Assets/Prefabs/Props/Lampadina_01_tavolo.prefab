@@ -44,7 +44,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
-  m_Range: 5
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -332,7 +332,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.3459136
-  m_Center: {x: -0.14031863, y: 0.6263151, z: 0.07927942}
+  m_Center: {x: 0, y: 0.39, z: 0}
 --- !u!114 &1078582299944435607
 MonoBehaviour:
   m_ObjectHideFlags: 0

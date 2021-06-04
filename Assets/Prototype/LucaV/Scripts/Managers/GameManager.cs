@@ -62,14 +62,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartLevelGeneration();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetLevel();
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    StartLevelGeneration();
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    ResetLevel();
+        //}
 
         if (enemyRobotsNumber >= MaxEnemyRobots && friendlyRobotsNumber >= MaxFriendlyRobots && !hasGeneratedLevel && gameState == GameState.loading)
         {

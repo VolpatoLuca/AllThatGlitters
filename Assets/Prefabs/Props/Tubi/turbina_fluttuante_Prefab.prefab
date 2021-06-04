@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7060183694751823866}
   - component: {fileID: 9059911971269445977}
   m_Layer: 0
-  m_Name: turbina_fluttuante_geo
+  m_Name: turbina_fluttuante_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6220284909031311530}
-  m_Mesh: {fileID: -6587115522219627066, guid: e390156d07334714388dad0dcacaff7c, type: 3}
+  m_Mesh: {fileID: -6587115522219627066, guid: b02c893f29fc64046946f4216f871102, type: 3}
 --- !u!23 &5571542468704823679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7850421527189271234, guid: e390156d07334714388dad0dcacaff7c, type: 3}
+  - {fileID: 2100000, guid: b030c9f647205d3468ea9d25bc61439f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

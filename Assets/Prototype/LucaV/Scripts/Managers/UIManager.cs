@@ -189,7 +189,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowMissingRobots(int val)
     {
-        missingRobotsText.text = "YOU NEED " + val + " MORE ROBOTS!";
+        //missingRobotsText.text = "YOU NEED " + val + " MORE ROBOTS!";
+        missingRobotsText.text = "NOT ENOUGH ROBOTS";
         missingRobotsText.color = Color.red;
         StartCoroutine(ReduceAlphaOverTime(missingRobotsText));
     }
@@ -198,11 +199,13 @@ public class UIManager : MonoBehaviour
     {
         Color c = txt.color;
         yield return new WaitForSeconds(1f);
-        while (txt.color.a >= 0)
-        {
-            c.a -= Time.deltaTime;
-            yield return null;
-        }
+
+        Debug.Log("sparisce");
+        //while (txt.color.a >= 0)
+        //{
+        //    c.a -= Time.deltaTime;
+        //    yield return null;
+        //}
         txt.text = "";
         yield return null;
     }

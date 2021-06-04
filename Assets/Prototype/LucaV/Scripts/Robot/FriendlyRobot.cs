@@ -21,6 +21,7 @@ public class FriendlyRobot : Robot
     {
         base.Interact();
         isActivated = true;
+        GameManager.singleton.Player.GetComponent<Interact>().Remove(gameObject.GetComponent<Interactable>());
     }
 
     protected override void OnPlayerNearby(GameObject _player)

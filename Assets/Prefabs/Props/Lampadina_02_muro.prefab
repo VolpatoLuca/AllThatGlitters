@@ -44,7 +44,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
-  m_Range: 5
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -184,7 +184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6420052385755060080}
   - component: {fileID: 2531008406624532910}
-  - component: {fileID: 8219170514595878026}
   - component: {fileID: 2102249047}
   - component: {fileID: 2102249046}
   m_Layer: 8
@@ -223,21 +222,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.54146975, y: 0.35461813, z: 0.5094657}
-  m_Center: {x: 0.021390289, y: 0.17577669, z: -0.0062226653}
---- !u!114 &8219170514595878026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4867961121878164165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8e8a821d772344898c8c69ad74e509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderers: []
+  m_Size: {x: 0.54146975, y: 0.60069036, z: 0.37722594}
+  m_Center: {x: 0.021390289, y: 0.052740574, z: 0.14366105}
 --- !u!135 &2102249047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -249,7 +235,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2102249046
 MonoBehaviour:

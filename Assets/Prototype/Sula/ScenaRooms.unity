@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.37
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -177,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 7452722039775444534, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scaffali_small_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452722039775444534, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
@@ -190,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_arredate_Prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8927462786536216855, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_RootOrder
@@ -309,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_Small_arredate_Prefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6198462039325592237, guid: ecb9974c1ab12d841be3ab67a43badc0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8036619977171058743, guid: ecb9974c1ab12d841be3ab67a43badc0, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -368,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.37
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -380,19 +392,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071066
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710707
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -400,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6840950367134561452, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -409,6 +421,10 @@ PrefabInstance:
     - target: {fileID: 7452722039775444534, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scaffali_small_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452722039775444534, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2dc61f18ce05f45810a903b1f42e7d, type: 3}
@@ -422,6 +438,10 @@ PrefabInstance:
     - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_arredate_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8927462786536216855, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_RootOrder
@@ -480,6 +500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_Small_arredate_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6198462039325592237, guid: ecb9974c1ab12d841be3ab67a43badc0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8036619977171058743, guid: ecb9974c1ab12d841be3ab67a43badc0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -536,6 +560,10 @@ PrefabInstance:
     - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_arredate_Prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8927462786536216855, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_RootOrder
@@ -686,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_Name
       value: PropSpawner_Scrivanie_arredate_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784559150437405581, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8927462786536216855, guid: 5d9b7aeec7c3e2b47aef7ec76ec82c48, type: 3}
       propertyPath: m_RootOrder

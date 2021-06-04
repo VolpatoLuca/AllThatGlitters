@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1308600792790764886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3146756462378649548}
+  - component: {fileID: 3786348259098057470}
+  m_Layer: 6
+  m_Name: PropSpawner_Tubi_Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3146756462378649548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308600792790764886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.92279685, y: 0.00000023841858, z: -4.994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3786348259098057470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308600792790764886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da82893dd46449e4fa0d34bb672a4f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  props:
+  - {fileID: 2990152341901629379, guid: eb10cb89ca5142548a31b6408bb89e5f, type: 3}
+  - {fileID: 2811754143201555865, guid: 0cff7b6d646cdb64a9c27c00d6adcf45, type: 3}
+  - {fileID: 2374497196945942544, guid: 112cf3612236ff54ba630b93b2faa4df, type: 3}
+  - {fileID: 525697504019495537, guid: 471381585f4f1a64aacaea5e2e91b787, type: 3}
+  - {fileID: 6903083096699270172, guid: fff2cb6e399d6d448bd952667e8feaf4, type: 3}
+  - {fileID: 4560018350610931750, guid: f9319b56f65f24a46bbf5cba77d8c998, type: 3}
+  - {fileID: 4560018350610931750, guid: f9319b56f65f24a46bbf5cba77d8c998, type: 3}
+  canSpawn: 0

@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
     public int maxEnergy = 10;
     //[SerializeField]
     public float currentEnergy;
-
+    private bool isDead;
 
     public bool isFull { get; private set; }
 
@@ -43,10 +43,10 @@ public class PlayerStats : MonoBehaviour
         {
             currentEnergy = energyDiff;
         }
-        else
+        else if(!isDead)
         {
+            isDead = true;
             currentEnergy = 0;
-            Debug.Log("Muerto");
             //ANIMATION morte
             animator.SetTrigger("Die");
             StartCoroutine(CallEndLevel());

@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInputs : MonoBehaviour
-{    
+{
     //INPUTS VARI
     public float rawInputHorizontal = 0;
     public float rawInputVertical = 0;
     public bool inputQ, inputE, inputEsc;
-    public Vector3 mousePos;     
+    public Vector3 mousePos;
     public Ray mouseRay;
-    
+
     private void Update()
     {
-        ReadInputs();      
+        if (GameManager.singleton.gameState == GameState.playing)
+            ReadInputs();
     }
 
     void ReadInputs()

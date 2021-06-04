@@ -13,4 +13,7 @@ Per avere assets dentro la stanza;
 - mettere MAX una luce per stanza
 	
 
-	-
+	
+
+
+	Attivare facce

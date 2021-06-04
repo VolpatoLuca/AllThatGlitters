@@ -166,6 +166,6 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Pos: {r: -6.876361, g: 0, b: 0.46858296, a: 0}
+    - _Pos: {r: 2.8515065, g: 0, b: -5.006201, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

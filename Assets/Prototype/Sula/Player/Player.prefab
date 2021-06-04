@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3787481561654535094}
   inputs: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 4179923811942294418}
   speed: 7
   turnSmoothingTime: 0.1
   gravity: -0.5
@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e86bc2148afb34ca9145bdc58992cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   maxEnergy: 30
   currentEnergy: 0
   robotsSaved: 0
@@ -342,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strongRadius: 9
+  fovMaterial: {fileID: 0}
   torch: {fileID: 7686959403921702592}
   strongRange: 9.5
   intensityStrong: 6
@@ -767,6 +769,11 @@ PrefabInstance:
 --- !u!4 &7845902061571521000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2430661785423182065, guid: 46e6528279965de4183bc3e19ce674cf, type: 3}
+  m_PrefabInstance: {fileID: 5573569984941670681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4179923811942294418 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8600572163058967179, guid: 46e6528279965de4183bc3e19ce674cf, type: 3}
   m_PrefabInstance: {fileID: 5573569984941670681}
   m_PrefabAsset: {fileID: 0}
 --- !u!108 &7686959403921702592 stripped

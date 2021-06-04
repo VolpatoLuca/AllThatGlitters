@@ -43,14 +43,6 @@ public class Room : MonoBehaviour
     }
     private void CheckIsEndRoom()
     {
-        if (IsEndRoom)
-        {
-            MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
-            for (int i = 0; i < renderers.Length; i++)
-            {
-                renderers[i].material.color = Color.red;
-            }
-        }
     }
 
     private void DestroyRoom()

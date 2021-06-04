@@ -90,10 +90,16 @@ public class GameManager : MonoBehaviour
 
         if (gameState == GameState.playing)
         {
+            Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
             playerTimer += Time.deltaTime;
             UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
             if (Player)
                 floorMat.SetVector("_Pos", Player.transform.position);
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+
         }
     }
 
@@ -163,7 +169,6 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
         gameState = GameState.waitingInput;
         LevelReset?.Invoke();
         enemyRobotsNumber = 0;

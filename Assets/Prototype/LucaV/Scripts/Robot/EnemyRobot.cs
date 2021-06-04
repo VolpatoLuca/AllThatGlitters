@@ -74,7 +74,7 @@ public class EnemyRobot : Robot
         }
     }
 
-    protected override void Interact()
+    public override void Interact()
     {
         base.Interact();
     }

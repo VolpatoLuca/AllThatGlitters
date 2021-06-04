@@ -11,7 +11,12 @@ public class PropGenerator : MonoBehaviour
 
     private void Start()
     {
-        int rand = Random.Range(0, props.Length);
+        int rand;
+        do
+        {
+            rand = Random.Range(0, props.Length);
+        } while (props[rand] == null);
+
         if (props[rand].TryGetComponent(out Robot _))
         {
             spawn = props[rand];

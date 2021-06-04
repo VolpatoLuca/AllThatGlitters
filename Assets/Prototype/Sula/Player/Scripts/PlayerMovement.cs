@@ -42,31 +42,32 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = controller.isGrounded;
         //if (GameManager.singleton.gameState == GameState.playing)
         //{
-        LookAtCursor();
+        if (GameManager.singleton.gameState == GameState.playing)
+            LookAtCursor();
         ManageMovement();
         //}
-    }
+    } 
 
     private void ManageMovement()
     {
-        
+
         Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.1f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
         walkDirection = new Vector3(inputs.rawInputHorizontal, 0, inputs.rawInputVertical).normalized; //senza gravità per vedere se cammina
 
         //if (direction.magnitude >= 0.1f)
         //{
-            controller.Move(direction * speed * Time.deltaTime);
-            //ANIMATION Walk
-            if (walkDirection.magnitude >= 0.1f)
-            {
-                animator.SetBool("isWalking", true);
-                AnimationRotation();                
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-            }
-            
+        controller.Move(direction * speed * Time.deltaTime);
+        //ANIMATION Walk
+        if (walkDirection.magnitude >= 0.1f)
+        {
+            animator.SetBool("isWalking", true);
+            AnimationRotation();
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
         //}       
     }
 
@@ -87,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         if (plane.Raycast(inputs.mouseRay, out float distance))
         {
             worldPosOnPlane = inputs.mouseRay.GetPoint(distance);
-            target = new Vector3(worldPosOnPlane.x, transform.position.y,worldPosOnPlane.z );
+            target = new Vector3(worldPosOnPlane.x, transform.position.y, worldPosOnPlane.z);
             transform.LookAt(target);
         }
 
@@ -97,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 playerFWd = transform.forward.normalized;
         Vector3 sum = (walkDirection + playerFWd);
-        
+
         //Debug.Log("magnitude"  + sum.magnitude);
         // magnitude va da 0 a 2
 
@@ -119,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isWalkingFwd", false);
             }
         }
-   
+
     }
 
 

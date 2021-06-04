@@ -21,7 +21,6 @@ public class DiscoverableItem : MonoBehaviour
         {
             r.enabled = false;
         }
-        DiscoverItem(); //DA LEVARE
     }
 
     public void DiscoverItem()

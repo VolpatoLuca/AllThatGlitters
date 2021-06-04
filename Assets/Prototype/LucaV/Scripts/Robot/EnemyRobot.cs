@@ -31,7 +31,7 @@ public class EnemyRobot : Robot
 
     protected override void Update()
     {
-        if (player != null && !startedFollowing)
+        if (player != null && !startedFollowing && !Physics.Raycast(transform.position + transform.up, (player.position + player.up) - (transform.position + transform.up), Vector3.Distance(player.position, transform.position), 1 << LayerMask.NameToLayer("Wall")))
         {
             startedFollowing = true;
             isActive = true;
@@ -51,25 +51,28 @@ public class EnemyRobot : Robot
                 return;
             }
 
-            bool isInLos = !Physics.Raycast(transform.position + transform.up, (player.position + player.up) - (transform.position + transform.up), Vector3.Distance(player.position, transform.position), 1 << LayerMask.NameToLayer("Wall"));
+            if (player)
+            {
+                bool isInLos = !Physics.Raycast(transform.position + transform.up, (player.position + player.up) - (transform.position + transform.up), Vector3.Distance(player.position, transform.position), 1 << LayerMask.NameToLayer("Wall"));
 
 
-            if (Vector3.Distance(transform.position, player.position) < energyRange && GameManager.singleton.gameState == GameState.playing && isInLos)
-            {
-                bezierOffset = transform.position;
-                bezierOffset += transform.forward * 1.5f + transform.up * 2;
-                t += Time.deltaTime * Random.Range(0.1f, 3f);
-                bezierOffset += transform.right * (Mathf.PingPong(t, 1) - .5f);
-                lightning.SetVector3("SecondPointBezier", bezierOffset);
-                lightning.enabled = true;
-                lightning.SetVector3("TargetPos", player.position);
-                float energyStole = energySteal * Time.deltaTime;
-                pStats.ConsumeEnergy(energyStole);
-                currentEnergy += Time.deltaTime;
-            }
-            else
-            {
-                lightning.enabled = false;
+                if (Vector3.Distance(transform.position, player.position) < energyRange && GameManager.singleton.gameState == GameState.playing && isInLos)
+                {
+                    bezierOffset = transform.position;
+                    bezierOffset += transform.forward * 1.5f + transform.up * 2;
+                    t += Time.deltaTime * Random.Range(0.1f, 3f);
+                    bezierOffset += transform.right * (Mathf.PingPong(t, 1) - .5f);
+                    lightning.SetVector3("SecondPointBezier", bezierOffset);
+                    lightning.enabled = true;
+                    lightning.SetVector3("TargetPos", player.position);
+                    float energyStole = energySteal * Time.deltaTime;
+                    pStats.ConsumeEnergy(energyStole);
+                    currentEnergy += Time.deltaTime;
+                }
+                else
+                {
+                    lightning.enabled = false;
+                }
             }
         }
     }

@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour
 {
     //REF
     //UIMANAGER SENNò NON VA LA UI :)
+    [SerializeField]
+    Animator animator;
 
     //Energy
     //[SerializeField]
@@ -22,6 +24,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         currentEnergy = maxEnergy;
         isFull = true;
         //UI
@@ -44,6 +47,7 @@ public class PlayerStats : MonoBehaviour
             currentEnergy = 0;
             Debug.Log("Muerto");
             //ANIMATION morte
+            animator.SetTrigger("Die");
         }
         //UI
         //UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));

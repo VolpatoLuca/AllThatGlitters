@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     //rotation stuff
     public Vector3 worldPosOnPlane;
     Vector3 target;
+    Vector3 walkDirection;
 
     private void Start()
     {
@@ -51,21 +52,23 @@ public class PlayerMovement : MonoBehaviour
     {
         
         Vector3 direction = new Vector3(inputs.rawInputHorizontal, isGrounded ? -0.1f : gravity, inputs.rawInputVertical).normalized; //Vettore di movimento
-        Vector3 walkDirection = new Vector3(inputs.rawInputHorizontal, 0, inputs.rawInputVertical).normalized; //senza gravità per vedere se cammina
+        walkDirection = new Vector3(inputs.rawInputHorizontal, 0, inputs.rawInputVertical).normalized; //senza gravità per vedere se cammina
 
-        if (direction.magnitude >= 0.1f)
-        {
+        //if (direction.magnitude >= 0.1f)
+        //{
             controller.Move(direction * speed * Time.deltaTime);
             //ANIMATION Walk
             if (walkDirection.magnitude >= 0.1f)
             {
                 animator.SetBool("isWalking", true);
+                AnimationRotation();                
             }
             else
             {
                 animator.SetBool("isWalking", false);
             }
-        }       
+            
+        //}       
     }
 
     private void RotateTowardsMovement(Vector3 direction)
@@ -89,6 +92,35 @@ public class PlayerMovement : MonoBehaviour
             transform.LookAt(target);
         }
 
+    }
+
+    void AnimationRotation()
+    {
+        Vector3 playerFWd = transform.forward.normalized;
+        Vector3 sum = (walkDirection + playerFWd);
+        
+        //Debug.Log("magnitude"  + sum.magnitude);
+        // magnitude va da 0 a 2
+
+        if (sum.magnitude >= 1f)
+        {
+            if (!animator.GetBool("isWalkingFwd"))
+            {
+                //Debug.Log("avanti");
+                animator.SetBool("isWalkingFwd", true);
+                animator.SetBool("isWalkingBack", false);
+            }
+        }
+        else if (sum.magnitude < 1f)
+        {
+            if (!animator.GetBool("isWalkingBack"))
+            {
+                //Debug.Log("indietro");
+                animator.SetBool("isWalkingBack", true);
+                animator.SetBool("isWalkingFwd", false);
+            }
+        }
+   
     }
 
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     PlayerInputs inputs;
+    PlayerStats stats;
 
     public List<Interactable> availableInteractables;
     public Interactable closestInteractable;
@@ -12,6 +13,7 @@ public class Interact : MonoBehaviour
     private void Start()
     {
         inputs = GetComponent<PlayerInputs>();
+        stats = GetComponent<PlayerStats>();
     }
 
 
@@ -63,7 +65,25 @@ public class Interact : MonoBehaviour
 
         if (inputs.inputE && closestInteractable != null)
         {
+            if (closestInteractable.TryGetComponent(out Battery battery))
+            {
+                float energySum = stats.currentEnergy += battery.recharge;
+
+                if (energySum >= stats.maxEnergy)
+                {
+                    stats.currentEnergy = stats.maxEnergy;
+                    Debug.Log("Full Energy");
+                    return;
+                }
+                else
+                {
+                    closestInteractable.Interact();
+                }
+            }
+            else
+            {
             closestInteractable.Interact();
+            }
         }
 
     }

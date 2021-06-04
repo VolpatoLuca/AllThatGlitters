@@ -19,6 +19,8 @@ public class EnemyRobot : Robot
     private Vector3 bezierOffset;
     private float t;
 
+    AudioManager audioM;
+
     protected override void Start()
     {
         base.Start();
@@ -27,6 +29,7 @@ public class EnemyRobot : Robot
         lightning = GetComponent<VisualEffect>();
         audioS = GetComponent<AudioSource>();
         lightning.enabled = false;
+        audioM = FindObjectOfType<AudioManager>();
     }
 
     protected override void Update()
@@ -36,7 +39,7 @@ public class EnemyRobot : Robot
             startedFollowing = true;
             isActive = true;
             StartCoroutine(FollowPlayer(player, 0));
-            audioS.Play();
+            audioM.PlaySound("EnemyDamage");
         }
         if (startedFollowing && isActive)
         {
@@ -48,6 +51,7 @@ public class EnemyRobot : Robot
                 agent.isStopped = true;
                 lightning.enabled = false;
                 audioS.Stop();
+                audioM.StopSound("EnemyDamage");
                 return;
             }
 

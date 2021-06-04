@@ -1,9 +1,18 @@
 fileFormatVersion: 2
-guid: e94c82281d580474b91257ca9ebc060f
+<<<<<<< HEAD:Assets/Prototype/Sula/Prefab e modelli/Generatore_geo.fbx.meta
+guid: 15d16c6449a13c3458c7b43a716008a9
+=======
+guid: 4d7cd45332bb2e4479ca52d112c68338
+>>>>>>> origin/Chiachi:Assets/Prototype/Chiachi/capsule_piante_batteria_geo.fbx.meta
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: generatore_MAT
+    second: {fileID: 2100000, guid: 5eca7193ceb6c674eb0a94c2fc65e98c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +43,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.01
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -85,7 +94,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

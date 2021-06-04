@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inputs = GetComponent<PlayerInputs>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()

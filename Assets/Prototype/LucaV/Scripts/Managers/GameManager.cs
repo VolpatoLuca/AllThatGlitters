@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int friendlyRobotsNumber;
     public int MaxFriendlyRobots { get; set; }
 
+    private GameObject mainCam;
     private float generateWaitTime = 1f;
     private bool hasGeneratedRooms = false;
     private bool hasGeneratedLevel = false;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        mainCam = Camera.main.gameObject;
     }
 
 
@@ -89,10 +90,16 @@ public class GameManager : MonoBehaviour
 
         if (gameState == GameState.playing)
         {
+            Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
             playerTimer += Time.deltaTime;
             UIManager.singleton.UpdateBotsText(CurrentRescuedRobots);
             if (Player)
                 floorMat.SetVector("_Pos", Player.transform.position);
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+
         }
     }
 
@@ -125,7 +132,7 @@ public class GameManager : MonoBehaviour
             SelectSpawners(enemyGenerators, MaxEnemyRobots, out enemyRobotsNumber);
         if (friendsGenerators.Count > 0)
             SelectSpawners(friendsGenerators, MaxFriendlyRobots, out friendlyRobotsNumber);
-        Camera.main.gameObject.SetActive(false);
+        mainCam.SetActive(false);
         RoomsGenerated?.Invoke();
     }
 
@@ -151,6 +158,7 @@ public class GameManager : MonoBehaviour
     public void OnLevelFinish(bool hasPlayerWon)
     {
         gameState = GameState.gameOver;
+        Destroy(Player);
         UIManager.singleton.ShowEndGameCanvas(hasPlayerWon);
     }
 
@@ -161,7 +169,6 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
         gameState = GameState.waitingInput;
         LevelReset?.Invoke();
         enemyRobotsNumber = 0;
@@ -175,6 +182,7 @@ public class GameManager : MonoBehaviour
         CurrentRescuedRobots = 0;
         hasGeneratedLevel = false;
         playerTimer = 0;
+        mainCam.SetActive(true);
     }
 
     public void EndLevelInteracted()

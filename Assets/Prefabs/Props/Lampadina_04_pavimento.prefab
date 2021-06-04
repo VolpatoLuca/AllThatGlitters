@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420383078}
   - component: {fileID: 420383079}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4528565451337984893}
   - component: {fileID: 6375903410343691804}
   - component: {fileID: 2170143899007911973}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Lamp_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 26b58cc81d5345e44b20f6cc44fbe78a, type: 2}
+  - {fileID: -7964107986667598607, guid: 95e068b02f865174bb4512f84c654dee, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 3546990435072632954}
   - component: {fileID: 6562227991013442651}
   - component: {fileID: 1630946955894080504}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Lamp_04_Vetro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc2025254e2ac304189df4e50597b2ef, type: 2}
+  - {fileID: -5034896075580397228, guid: 95e068b02f865174bb4512f84c654dee, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -268,8 +268,8 @@ GameObject:
   - component: {fileID: 1144572916381920445}
   - component: {fileID: 1121750660}
   - component: {fileID: 1121750659}
-  m_Layer: 8
-  m_Name: Lampadina_04_pavimento
+  m_Layer: 0
+  m_Name: Lampadina_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,10 +353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699445948298300884}
     m_Modifications:
-    - target: {fileID: 61111125902753995, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1627735644657916189, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -444,10 +440,6 @@ PrefabInstance:
     - target: {fileID: 8210432024688228263, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
       propertyPath: m_Name
       value: InteractCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210432024688228263, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa33916395bfbd04a87b0e8c3699a07c, type: 3}

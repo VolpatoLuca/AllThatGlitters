@@ -21,7 +21,7 @@ public abstract class Robot : MonoBehaviour
 
     }
 
-    protected virtual void Interact()
+    public virtual void Interact()
     {
 
     }

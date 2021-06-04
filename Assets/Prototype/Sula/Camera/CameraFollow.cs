@@ -14,16 +14,6 @@ public class CameraFollow : MonoBehaviour
     float zoomT;
     float scrollSpeed = 30f;
 
-    private void OnEnable()
-    {
-        GameManager.singleton.LevelReset += DestroySelf;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.singleton.LevelReset -= DestroySelf;
-    }
-
     private void Start()
     {
         transform.parent = null;
@@ -39,16 +29,9 @@ public class CameraFollow : MonoBehaviour
 
     private void Follow()
     {
-        if (!player)
-            return;
         Vector3 desiredPosition = currentCameraOffset + player.transform.position; //al momento il player è sollevato di 1 su Y
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
-    }
-
-    private void DestroySelf()
-    {
-        Destroy(gameObject);
     }
 
     void cameraZoom()

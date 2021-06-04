@@ -3,7 +3,12 @@ guid: e94c82281d580474b91257ca9ebc060f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carrello_MAT
+    second: {fileID: 2100000, guid: be24988daf751fd48bf9cf4aef5e306b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

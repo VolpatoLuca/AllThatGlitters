@@ -17,7 +17,7 @@ public class FriendlyRobot : Robot
         }
     }
 
-    public override void Interact()
+    protected override void Interact()
     {
         base.Interact();
         isActivated = true;

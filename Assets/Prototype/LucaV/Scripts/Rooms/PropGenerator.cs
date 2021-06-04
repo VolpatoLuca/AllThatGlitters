@@ -21,6 +21,7 @@ public class PropGenerator : MonoBehaviour
             }
             else
             {
+                print("non dovrei printare");
                 GameManager.singleton.friendsGenerators.Add(this);
             }
         }

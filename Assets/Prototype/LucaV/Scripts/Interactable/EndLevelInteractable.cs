@@ -1,19 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class EndLevelInteractable : Interactable
 {
     private Room thisRoom;
-    [SerializeField] private GameObject vfx;
     private void OnEnable()
     {
         GameManager.singleton.RoomsGenerated += CheckIfEndRoom;
-        vfx = GetComponentInChildren<VisualEffect>().gameObject;
-        if (!vfx)
-            print(transform.position);
-        vfx.SetActive(false);
     }
     private void OnDisable()
     {
@@ -22,14 +16,16 @@ public class EndLevelInteractable : Interactable
 
     private void CheckIfEndRoom()
     {
-        if (transform.parent.TryGetComponent(out thisRoom))
+        if (transform.parent.TryGetComponent(out thisRoom) && !thisRoom.IsEndRoom)
         {
-            if (!thisRoom.IsEndRoom)
-                Destroy(gameObject);
-            else
-                vfx.SetActive(true);
+            Destroy(gameObject);
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
+
     public override void Interact()
     {
         GameManager.singleton.EndLevelInteracted();

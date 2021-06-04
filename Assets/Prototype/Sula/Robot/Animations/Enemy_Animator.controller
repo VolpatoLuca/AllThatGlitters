@@ -53,70 +53,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
-<<<<<<< HEAD:Assets/Prototype/Sula/Robot/Animations/Enemy_Animator.controller
 --- !u!1101 &-6133207745872480288
-=======
---- !u!1102 &-2578047581106654399
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 7750027586088356022}
-  - {fileID: -392757091073411413}
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8a0ca4f1cb1f8de4bbc245b012af2d7a, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1107 &-2486167643781975697
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: -2578047581106654399}
-    m_Position: {x: 40, y: 190, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -32252593447901610}
-    m_Position: {x: 40, y: 270, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -4291742735162896012}
-    m_Position: {x: 280, y: 260, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -3729770538287694247}
-    m_Position: {x: 40, y: 340, z: 0}
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 60, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -2578047581106654399}
---- !u!1101 &-392757091073411413
->>>>>>> LucaV:Assets/Prototype/Sula/Player/Player_Animator.controller
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,36 +120,18 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-<<<<<<< HEAD:Assets/Prototype/Sula/Robot/Animations/Enemy_Animator.controller
   - m_Name: WakeUp
     m_Type: 9
-=======
-  - m_Name: isLying
-    m_Type: 4
->>>>>>> LucaV:Assets/Prototype/Sula/Player/Player_Animator.controller
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-<<<<<<< HEAD:Assets/Prototype/Sula/Robot/Animations/Enemy_Animator.controller
   - m_Name: isFollowing
-=======
-  - m_Name: isDead
->>>>>>> LucaV:Assets/Prototype/Sula/Player/Player_Animator.controller
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-<<<<<<< HEAD:Assets/Prototype/Sula/Robot/Animations/Enemy_Animator.controller
-=======
-  - m_Name: Die
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
->>>>>>> LucaV:Assets/Prototype/Sula/Player/Player_Animator.controller
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

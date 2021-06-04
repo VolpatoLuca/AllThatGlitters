@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] protected GameObject canvas;
+    [SerializeField] private GameObject canvas;
     public bool IsPlayerNear { get; set; }
 
     protected virtual void Start()

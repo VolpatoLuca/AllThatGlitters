@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     Vector3 currentCameraOffset;
 
     [SerializeField]
-    float smoothSpeed = 0.01f;    
+    float smoothSpeed = 2f;    
     float zoomT;
     float scrollSpeed = 30f;
 
@@ -42,7 +42,7 @@ public class CameraFollow : MonoBehaviour
         if (!player)
             return;
         Vector3 desiredPosition = currentCameraOffset + player.transform.position; //al momento il player è sollevato di 1 su Y
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
     }
 

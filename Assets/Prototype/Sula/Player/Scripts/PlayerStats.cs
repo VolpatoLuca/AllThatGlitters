@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class PlayerStats : MonoBehaviour
         currentEnergy = maxEnergy;
         isFull = true;
         //UI
-        //UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
 
     }
 
@@ -48,9 +49,16 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Muerto");
             //ANIMATION morte
             animator.SetTrigger("Die");
+            StartCoroutine(CallEndLevel());
         }
         //UI
-        //UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
+    }
+
+    private IEnumerator CallEndLevel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameManager.singleton.OnLevelFinish(false);
     }
 
     public void RefillEnergy(int energyRefill)
@@ -82,12 +90,12 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    void AddSavedRobot()
-    {
-        robotsSaved++;
-        //UI
-        GameManager.singleton.CurrentRescuedRobots = robotsSaved;
-    }
+    //void AddSavedRobot()
+    //{
+    //    robotsSaved++;
+    //    //UI
+    //    GameManager.singleton.CurrentRescuedRobots = robotsSaved;
+    //}
 
 
 
@@ -96,14 +104,14 @@ public class PlayerStats : MonoBehaviour
 
 
         //ROBINE DI PROVA
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            ConsumeEnergy(1);
-        }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    ConsumeEnergy(1);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            RefillEnergy(1);
-        }
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
+        //    RefillEnergy(1);
+        //}
     }
 }

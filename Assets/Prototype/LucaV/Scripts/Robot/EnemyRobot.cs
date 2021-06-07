@@ -20,6 +20,7 @@ public class EnemyRobot : Robot
     private float t;
 
     AudioManager audioM;
+    
 
     protected override void Start()
     {
@@ -29,7 +30,9 @@ public class EnemyRobot : Robot
         lightning = GetComponent<VisualEffect>();
         audioS = GetComponent<AudioSource>();
         lightning.enabled = false;
+
         audioM = FindObjectOfType<AudioManager>();
+        
     }
 
     protected override void Update()
@@ -39,6 +42,11 @@ public class EnemyRobot : Robot
             startedFollowing = true;
             isActive = true;
             StartCoroutine(FollowPlayer(player, 0));
+            screen.GetComponent<SkinnedMeshRenderer>().enabled = true;//riattivo la faccia
+            //Anim           
+            animator.SetTrigger("WakeUp");
+            animator.SetBool("isFollowing", true);
+
             audioM.PlaySound("EnemyDamage");
         }
         if (startedFollowing && isActive)
@@ -52,6 +60,9 @@ public class EnemyRobot : Robot
                 lightning.enabled = false;
                 audioS.Stop();
                 audioM.StopSound("EnemyDamage");
+                //Anim
+                animator.SetTrigger("Die");
+                screen.GetComponent<SkinnedMeshRenderer>().enabled = false;//spengo la faccia
                 return;
             }
 

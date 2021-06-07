@@ -636,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 3787481561654535089}
     - target: {fileID: 9095202079918539522, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: smoothSpeed
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9095202079918539523, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: m_RenderPostProcessing
@@ -672,11 +672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9095202079918539534, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22
+      value: 15.9
       objectReference: {fileID: 0}
     - target: {fileID: 9095202079918539534, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.5
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 9095202079918539534, guid: b30361e165752f84f9386a4df1bee6b4, type: 3}
       propertyPath: m_LocalRotation.w

@@ -200,7 +200,6 @@ public class UIManager : MonoBehaviour
         Color c = txt.color;
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("sparisce");
         //while (txt.color.a >= 0)
         //{
         //    c.a -= Time.deltaTime;

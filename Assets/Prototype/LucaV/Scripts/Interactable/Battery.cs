@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//aggiungere il requirement del mesh collider e che sia trigger
 
 public class Battery : Interactable
 {   
     public int recharge = 1;
     AudioManager audioM;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         audioM = FindObjectOfType<AudioManager>();
     }
 

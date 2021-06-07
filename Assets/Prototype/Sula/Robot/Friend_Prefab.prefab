@@ -62,7 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceThreshold: 1
+  EnergyPrice: 5
   body: {fileID: 6008643316570497568}
+  screen: {fileID: 1695853958539935356}
 --- !u!195 &655704060937129038
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -287,5 +289,10 @@ Transform:
 --- !u!1 &6008643316570497568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3567008629120116530, guid: 491947a301c1d644d833c10478ff5330, type: 3}
+  m_PrefabInstance: {fileID: 7125383119179384082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1695853958539935356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8460733185531509614, guid: 491947a301c1d644d833c10478ff5330, type: 3}
   m_PrefabInstance: {fileID: 7125383119179384082}
   m_PrefabAsset: {fileID: 0}

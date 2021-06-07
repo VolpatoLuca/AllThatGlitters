@@ -43,7 +43,7 @@ public class FriendlyRobot : Robot
             //Debug.Log("body.transform.parent");
             //nascondo il corpo e riattivo lo schermo
             body.GetComponent<SkinnedMeshRenderer>().enabled = false;
-            screen.GetComponent<SkinnedMeshRenderer>().enabled = true;
+            screen.enabled = true;
             //Rimuovo interactable??
             Destroy(GetComponent<RobotInteract>());
 

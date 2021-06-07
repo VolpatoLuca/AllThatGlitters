@@ -12,13 +12,13 @@ public abstract class Robot : MonoBehaviour
     protected PlayerStats pStats;
     protected NavMeshAgent agent;
 
-    [SerializeField] protected GameObject screen;
+    [SerializeField] protected SkinnedMeshRenderer screen;
     protected Animator animator;
 
     protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        screen.GetComponent<SkinnedMeshRenderer>().enabled = false; //disattivo la faccia
+        screen.enabled = false; //disattivo la faccia
         animator = GetComponentInChildren<Animator>();
     }
     protected virtual void Update()

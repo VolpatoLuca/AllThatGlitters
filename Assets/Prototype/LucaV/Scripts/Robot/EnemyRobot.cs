@@ -42,7 +42,7 @@ public class EnemyRobot : Robot
             startedFollowing = true;
             isActive = true;
             StartCoroutine(FollowPlayer(player, 0));
-            screen.GetComponent<SkinnedMeshRenderer>().enabled = true;//riattivo la faccia
+            screen.enabled = true;//riattivo la faccia
             //Anim           
             animator.SetTrigger("WakeUp");
             animator.SetBool("isFollowing", true);
@@ -62,7 +62,7 @@ public class EnemyRobot : Robot
                 audioM.StopSound("EnemyDamage");
                 //Anim
                 animator.SetTrigger("Die");
-                screen.GetComponent<SkinnedMeshRenderer>().enabled = false;//spengo la faccia
+                screen.enabled = false;//spengo la faccia
                 return;
             }
 

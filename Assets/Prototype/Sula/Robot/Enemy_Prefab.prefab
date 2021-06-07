@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9ee5b71a7766b429a19a5d8f5e4b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 4410254824951994604}
+  screen: {fileID: 1778454481502006114}
   moveSpeed: 2
   maxEnergy: 3
   energyRange: 9
@@ -211,8 +211,7 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,8 +394,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 84464835506577387, guid: faf9944f7463b024b9b44cf77dc2a774, type: 3}
   m_PrefabInstance: {fileID: 1062751693092141413}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4410254824951994604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3714335465487524233, guid: faf9944f7463b024b9b44cf77dc2a774, type: 3}
+--- !u!137 &1778454481502006114 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1590318109759328775, guid: faf9944f7463b024b9b44cf77dc2a774, type: 3}
   m_PrefabInstance: {fileID: 1062751693092141413}
   m_PrefabAsset: {fileID: 0}

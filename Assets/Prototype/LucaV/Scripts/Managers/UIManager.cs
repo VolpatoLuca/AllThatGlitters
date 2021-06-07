@@ -245,4 +245,9 @@ public class UIManager : MonoBehaviour
     {
         howToPlayCanvas.SetActive(b);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

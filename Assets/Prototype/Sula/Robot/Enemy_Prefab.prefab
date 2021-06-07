@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3620069825006714659}
   - component: {fileID: 4200123883362788389}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,8 +204,7 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -375,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 749784460845761873, guid: faf9944f7463b024b9b44cf77dc2a774, type: 3}
       propertyPath: m_Name
-      value: robottino_cattivo_Prefab
+      value: Enemy_Robot_Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf9944f7463b024b9b44cf77dc2a774, type: 3}

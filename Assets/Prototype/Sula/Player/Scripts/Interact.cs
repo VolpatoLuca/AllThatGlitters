@@ -73,6 +73,7 @@ public class Interact : MonoBehaviour
                 {
                     stats.currentEnergy = stats.maxEnergy;
                     Debug.Log("Full Energy");
+                    //da dire in ui magari
                     return;
                 }
                 else

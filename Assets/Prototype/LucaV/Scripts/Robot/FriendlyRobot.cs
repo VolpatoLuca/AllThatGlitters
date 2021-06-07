@@ -6,6 +6,8 @@ public class FriendlyRobot : Robot
 {
     private bool isActivated = false;
     [SerializeField] private float distanceThreshold = 1f;
+    [SerializeField] float EnergyPrice = 5f;
+    [SerializeField] GameObject body;
     AudioManager audioM;
 
     private void Start()
@@ -25,11 +27,22 @@ public class FriendlyRobot : Robot
 
     public override void Interact()
     {
-        base.Interact();
-        Debug.Log("va");
-        audioM.PlaySound("FollowFriend");
-        isActivated = true;
-        GameManager.singleton.Player.GetComponent<Interact>().Remove(gameObject.GetComponent<Interactable>());
+        if (!isActivated)
+        {
+            base.Interact();
+            //tolgo energia al player
+            pStats.ConsumeEnergy(EnergyPrice);
+            ////fermo l'animazione? vabbè per ora metto il movimento normale
+            Animator animator = GetComponentInChildren<Animator>();
+            animator.SetBool("isFollowing", true);
+            ////sparento il corpo?
+            //body.transform.parent = null;
+            //Debug.Log("body.transform.parent");
+
+            audioM.PlaySound("FollowFriend");
+            isActivated = true;
+            GameManager.singleton.Player.GetComponent<Interact>().Remove(gameObject.GetComponent<Interactable>());
+        }
 
     }
 

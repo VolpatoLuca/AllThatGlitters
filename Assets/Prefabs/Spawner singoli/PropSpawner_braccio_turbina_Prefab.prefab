@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3455354843262714625}
   - component: {fileID: 3518343849050267187}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_braccio_turbina_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

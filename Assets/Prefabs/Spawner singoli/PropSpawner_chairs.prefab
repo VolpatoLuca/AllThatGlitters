@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4009068571720072577}
   - component: {fileID: 2919277428998496435}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_chairs
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

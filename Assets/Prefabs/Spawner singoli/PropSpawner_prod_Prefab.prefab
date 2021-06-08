@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5205762595832942052}
   - component: {fileID: 6277697395067752662}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_prod_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

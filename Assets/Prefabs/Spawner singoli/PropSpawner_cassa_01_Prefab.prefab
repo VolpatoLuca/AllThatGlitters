@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10237372722162786}
   - component: {fileID: 2234936796473618768}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_cassa_01_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

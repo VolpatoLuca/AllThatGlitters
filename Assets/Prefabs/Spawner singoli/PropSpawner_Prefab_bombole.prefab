@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3754389305059942395}
   - component: {fileID: 3114816199659373257}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_Prefab_bombole
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

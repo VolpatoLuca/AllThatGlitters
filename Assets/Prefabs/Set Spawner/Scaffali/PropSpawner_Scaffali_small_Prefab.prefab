@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6840950367134561452}
   - component: {fileID: 4742213338239986078}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PropSpawner_Scaffali_small_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

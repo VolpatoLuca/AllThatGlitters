@@ -4746,6 +4746,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b528c01170863f5418d3e72e733f4fcd, type: 3}
   - {fileID: 21300000, guid: 8bdc8ab5e5c820e44b8ff758c3a6ad46, type: 3}
   image: {fileID: 1352214905}
+  leftButton: {fileID: 1416718184}
+  rightButton: {fileID: 160924246}
 --- !u!1 &1168870151
 GameObject:
   m_ObjectHideFlags: 0

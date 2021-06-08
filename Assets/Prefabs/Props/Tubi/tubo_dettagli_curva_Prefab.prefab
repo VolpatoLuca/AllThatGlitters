@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4817754147871083377}
   - component: {fileID: 4145680086757138023}
   - component: {fileID: 7616367686590568406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_dettagli_curva_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

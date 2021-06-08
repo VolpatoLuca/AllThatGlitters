@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6928384868204326568}
   - component: {fileID: 8034939791087853865}
   - component: {fileID: 2787296066993073821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_valvola_ruota_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

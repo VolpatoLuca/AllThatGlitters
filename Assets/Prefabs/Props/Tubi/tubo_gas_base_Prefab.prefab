@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 541148791977653161}
   - component: {fileID: 2467395647402609556}
   - component: {fileID: 959884419344549536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_gas_base_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6021866272507830069}
   - component: {fileID: 2060654742302065916}
   - component: {fileID: 2156159421127987365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_dettagli_base_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

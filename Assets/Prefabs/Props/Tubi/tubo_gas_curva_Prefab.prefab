@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8291228589188486153}
   - component: {fileID: 4030109921503705693}
   - component: {fileID: 5269620618038984468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_gas_curva_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

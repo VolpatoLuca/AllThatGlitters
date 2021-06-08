@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4325890635542509170}
   - component: {fileID: 3714137550150547167}
   - component: {fileID: 3835190321986278527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_perno_base_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

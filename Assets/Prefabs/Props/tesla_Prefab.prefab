@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2040889632052877596}
   - component: {fileID: 4087956816197837551}
   - component: {fileID: 467461467290619464}
-  m_Layer: 0
-  m_Name: tesla_geo
+  m_Layer: 8
+  m_Name: tesla_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

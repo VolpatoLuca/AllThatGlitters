@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8003641069140493692}
   - component: {fileID: 235550905651092919}
   - component: {fileID: 4294961944801371038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tubo_valvola_base_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

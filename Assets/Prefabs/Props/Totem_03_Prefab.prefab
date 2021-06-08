@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8759703096999572576}
   - component: {fileID: 6051757122169171708}
   - component: {fileID: 3929308310558690909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: totem_03_vetro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1400324589929471438}
   - component: {fileID: 2722609062046518677}
   - component: {fileID: 8134057014369909883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: totem_03_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 1858058033319892064}
   - component: {fileID: 746810807002781290}
   - component: {fileID: 4205898952445063383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Totem_03_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

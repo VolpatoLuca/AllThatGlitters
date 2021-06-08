@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5571542468704823679}
   - component: {fileID: 7060183694751823866}
   - component: {fileID: 9059911971269445977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: turbina_fluttuante_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

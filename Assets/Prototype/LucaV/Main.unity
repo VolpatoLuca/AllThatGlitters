@@ -6408,6 +6408,7 @@ MonoBehaviour:
   difficulties:
   - {fileID: 11400000, guid: e08549fcdb3176e4980b2880939d4bc4, type: 2}
   - {fileID: 11400000, guid: a299e3e3ca9dad247818291f9a9c37bd, type: 2}
+  - {fileID: 11400000, guid: 3465278ac08d06947ac08a6a6d0813c0, type: 2}
   - {fileID: 11400000, guid: 58e0dbb05f139194db98745fc24b0a27, type: 2}
 --- !u!4 &1426532754
 Transform:

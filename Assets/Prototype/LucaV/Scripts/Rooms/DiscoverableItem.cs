@@ -21,6 +21,8 @@ public class DiscoverableItem : MonoBehaviour
         {
             r.enabled = false;
         }
+        DiscoverItem();
+        Debug.Log("Ricorda di levare discover");
     }
 
     public void DiscoverItem()

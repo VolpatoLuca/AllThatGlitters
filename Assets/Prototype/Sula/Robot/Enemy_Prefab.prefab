@@ -49,7 +49,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!2083052967 &4569008716188289792
 VisualEffect:
@@ -86,10 +86,10 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
         m_Name: TargetPos
-        m_Overridden: 0
+        m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
         m_Name: SecondPointBezier
-        m_Overridden: 0
+        m_Overridden: 1
     m_Vector4f:
       m_Array:
       - m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 1778454481502006114}
   moveSpeed: 2
-  maxEnergy: 3
+  maxEnergy: 5
   energyRange: 6.5
   energySteal: 3
 --- !u!136 &6394213464096737784

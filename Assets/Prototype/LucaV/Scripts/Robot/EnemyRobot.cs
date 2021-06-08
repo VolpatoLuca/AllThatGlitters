@@ -63,6 +63,10 @@ public class EnemyRobot : Robot
                 //Anim
                 animator.SetTrigger("Die");
                 screen.enabled = false;//spengo la faccia
+                foreach (var c in GetComponents<Collider>())
+                {
+                    c.isTrigger = true;
+                }
                 return;
             }
 

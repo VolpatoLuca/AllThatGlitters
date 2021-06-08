@@ -24,7 +24,7 @@ public class PropGenerator : MonoBehaviour
             {
                 GameManager.singleton.enemyGenerators.Add(this);
             }
-            else
+            else if (spawn.TryGetComponent(out FriendlyRobot _))
             {
                 GameManager.singleton.friendsGenerators.Add(this);
             }

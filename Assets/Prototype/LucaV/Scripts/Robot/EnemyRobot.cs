@@ -96,7 +96,7 @@ public class EnemyRobot : Robot
 
     private IEnumerator DelayedStart()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine(FollowPlayer(player, 0));
         startedFollowing = true;
         isActive = true;

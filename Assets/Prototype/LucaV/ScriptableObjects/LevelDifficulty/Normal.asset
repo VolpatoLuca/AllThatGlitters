@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8150f7fab637a394483dfb5dcd4b5d8c, type: 3}
   m_Name: Normal
   m_EditorClassIdentifier: 
-  difficultyName: Nightmare
+  difficultyName: Normal
   roomAmount: 40
   friendlyRobotsAmount: 5
   enemyRobotsAmount: 4

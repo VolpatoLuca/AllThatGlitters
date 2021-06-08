@@ -10,16 +10,25 @@ public class Settings : MonoBehaviour
 
     [SerializeField] AudioMixer audioMixer;
 
+    float __volume;
+
     public void SetVolume(float volume)
     {
-        if (volume == -40f)
-        {
-            audioMixer.SetFloat("Volume", -80);
-        }
-        else
-        {
-            audioMixer.SetFloat("Volume", volume);
-        }
+        __volume = volume;
+
+        float sliderVolume = Mathf.Lerp(-80, 0, volume);
+
+        audioMixer.SetFloat("Volume", sliderVolume);
+        //if (volume == -40f)
+        //{
+        //    audioMixer.SetFloat("Volume", -80);
+        //}
+        //else
+        //{
+        //    audioMixer.SetFloat("Volume", volume);
+        //}
+
+
     }
 
     public void SetFullScreen(bool isFullscreen)
@@ -32,7 +41,8 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
-        GetResolutions();    
+        GetResolutions();
+        
     }
 
     private void GetResolutions()
@@ -64,5 +74,13 @@ public class Settings : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    private void Update()
+    {
+        //Debug.Log("slider" + __volume);
+
+        //audioMixer.GetFloat("Volume", out float _volume);
+        //Debug.Log("real" + _volume);
     }
 }

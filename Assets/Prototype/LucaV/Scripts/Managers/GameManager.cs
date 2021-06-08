@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
     [HideInInspector] public Dictionary<Room, float> roomDistances = new Dictionary<Room, float>();
     [HideInInspector] public List<PropGenerator> enemyGenerators = new List<PropGenerator>();
-    [HideInInspector] public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
+    /*[HideInInspector]*/ public List<PropGenerator> friendsGenerators = new List<PropGenerator>();
     public Vector3 startPos { get; set; }
     public int CurrentRescuedRobots { get; set; }
     public int RoomNumber { get; set; }

@@ -66,14 +66,13 @@ public class Interact : MonoBehaviour
         if (inputs.inputE && closestInteractable != null)
         {
             if (closestInteractable.TryGetComponent(out Battery battery))
-            {
-                float energySum = stats.currentEnergy += battery.recharge;
-
-                if (energySum >= stats.maxEnergy)
+            {               
+                if (stats.currentEnergy == stats.maxEnergy)
                 {
                     stats.currentEnergy = stats.maxEnergy;
-                    Debug.Log("Full Energy");
+                    //Debug.Log("Full Energy");
                     //da dire in ui magari
+                    UIManager.singleton.ShowFullEnergy();
                     return;
                 }
                 else
@@ -83,7 +82,7 @@ public class Interact : MonoBehaviour
             }
             else
             {
-            closestInteractable.Interact();
+                closestInteractable.Interact();
             }
         }
 

@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider energySlider;
     [SerializeField] private TMP_Text friendlyBotsText;
     [SerializeField] private TMP_Text missingRobotsText;
+    [SerializeField] private TMP_Text fullEnergyText;
     [Header("In Game Menu Canvas")]
     [SerializeField] private GameObject inGameMenuCanvas;
     [Header("Victory Canvas")]
@@ -155,6 +156,8 @@ public class UIManager : MonoBehaviour
     /// <param name="isInPause">If is going in pause or out</param>
     public void PauseUnpauseGame()
     {
+        if (GameManager.singleton.gameState != GameState.playing && GameManager.singleton.gameState != GameState.pause) { return; }
+        
         bool isInPause = GameManager.singleton.gameState == GameState.pause;
         inGameMenuCanvas.SetActive(!isInPause);
         if (!isInPause)
@@ -197,6 +200,13 @@ public class UIManager : MonoBehaviour
         missingRobotsText.text = "NOT ENOUGH ROBOTS";
         missingRobotsText.color = Color.red;
         StartCoroutine(ReduceAlphaOverTime(missingRobotsText));
+    }
+
+    public void ShowFullEnergy()
+    {
+        fullEnergyText.text = "FULL!";
+        fullEnergyText.color = Color.red;
+        StartCoroutine(ReduceAlphaOverTime(fullEnergyText));
     }
 
     IEnumerator ReduceAlphaOverTime(TMP_Text txt)

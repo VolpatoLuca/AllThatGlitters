@@ -66,14 +66,23 @@ public class PlayerStats : MonoBehaviour
     public void RefillEnergy(int energyRefill)
     {
         float energySum = currentEnergy += energyRefill;
+        
         //play sound
+        if (currentEnergy == maxEnergy)
+        {
+            currentEnergy = maxEnergy;
+            Debug.Log("Full Energy");
+            isFull = true;
+            return;
+        }
         if (energySum >= maxEnergy)
         {
             currentEnergy = maxEnergy;
             Debug.Log("Full Energy");
             isFull = true;
+            return;
         }
-        else
+        else 
         {
             currentEnergy = energySum;
             isFull = false;

@@ -20,7 +20,7 @@ public class EnemyRobot : Robot
     private float t;
 
     AudioManager audioM;
-    
+
 
     protected override void Start()
     {
@@ -32,16 +32,14 @@ public class EnemyRobot : Robot
         lightning.enabled = false;
 
         audioM = FindObjectOfType<AudioManager>();
-        
+
     }
 
     protected override void Update()
     {
         if (player != null && !startedFollowing && !Physics.Raycast(transform.position + transform.up, (player.position + player.up) - (transform.position + transform.up), Vector3.Distance(player.position, transform.position), 1 << LayerMask.NameToLayer("Wall")))
         {
-            startedFollowing = true;
-            isActive = true;
-            StartCoroutine(FollowPlayer(player, 0));
+            StartCoroutine(DelayedStart());
             screen.enabled = true;//riattivo la faccia
             //Anim           
             animator.SetTrigger("WakeUp");
@@ -94,6 +92,14 @@ public class EnemyRobot : Robot
                 }
             }
         }
+    }
+
+    private IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(FollowPlayer(player, 0));
+        startedFollowing = true;
+        isActive = true;
     }
 
     public override void Interact()

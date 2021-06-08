@@ -31,7 +31,6 @@ public class PlayerStats : MonoBehaviour
         currentEnergy = maxEnergy;
         isFull = true;
         //UI
-        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
 
     }
 
@@ -55,7 +54,6 @@ public class PlayerStats : MonoBehaviour
             StartCoroutine(CallEndLevel());
         }
         //UI
-        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
     }
 
     private IEnumerator CallEndLevel()
@@ -80,7 +78,6 @@ public class PlayerStats : MonoBehaviour
             currentEnergy = energySum;
             isFull = false;
             //UI
-            UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
         }
     }
 
@@ -105,7 +102,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-
+        UIManager.singleton.UpdateEnergySlider(NormalizeEnergy(maxEnergy, currentEnergy));
 
         //ROBINE DI PROVA
         //if (Input.GetKeyDown(KeyCode.Z))

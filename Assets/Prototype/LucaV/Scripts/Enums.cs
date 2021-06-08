@@ -14,3 +14,9 @@ public enum GameState
     gameOver,
     pause
 }
+
+public enum UIState
+{
+    mainMenu,
+    subMenu
+}

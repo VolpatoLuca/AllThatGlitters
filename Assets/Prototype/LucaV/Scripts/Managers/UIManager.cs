@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     [Space]
     [SerializeField] private LevelDifficulty[] difficulties;
 
+    private UIState currentState;
     private int currentDiff = 0;
     private string currentDiffName = "";
     private float loadingTimer;
@@ -70,6 +71,7 @@ public class UIManager : MonoBehaviour
         victoryCanvas.SetActive(false);
         defeatCanvas.SetActive(false);
         settingsCanvas.SetActive(false);
+        currentState = UIState.mainMenu;
 
         dropdown.ClearOptions();
         List<string> difficultyNames = new List<string>();
@@ -124,6 +126,8 @@ public class UIManager : MonoBehaviour
 
     public void OnPlayButton()
     {
+        if (currentState != UIState.mainMenu)
+            return;
         settingsCanvas.SetActive(false);
         howToPlayCanvas.SetActive(false);
         foreach (var diff in difficulties)
@@ -238,11 +242,19 @@ public class UIManager : MonoBehaviour
 
     public void OnSettingsToggle(bool val)
     {
+        if (!settingsCanvas.activeSelf && currentState != UIState.mainMenu)
+            return;
+
+        currentState = val ? UIState.subMenu : UIState.mainMenu;
         settingsCanvas.SetActive(val);
     }
 
     public void ToggleHowToPlayCanvas(bool b)
     {
+        if (!howToPlayCanvas.activeSelf && currentState != UIState.mainMenu)
+            return;
+
+        currentState = b ? UIState.subMenu : UIState.mainMenu;
         howToPlayCanvas.SetActive(b);
     }
 

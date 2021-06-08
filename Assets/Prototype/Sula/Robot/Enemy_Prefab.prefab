@@ -49,7 +49,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!2083052967 &4569008716188289792
 VisualEffect:
@@ -177,7 +177,7 @@ MonoBehaviour:
   screen: {fileID: 1778454481502006114}
   moveSpeed: 2
   maxEnergy: 3
-  energyRange: 9
+  energyRange: 6.5
   energySteal: 3
 --- !u!136 &6394213464096737784
 CapsuleCollider:
@@ -211,7 +211,8 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
